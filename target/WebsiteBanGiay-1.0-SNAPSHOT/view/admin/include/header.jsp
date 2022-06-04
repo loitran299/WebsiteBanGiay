@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="<c:url value='/css/quantri.css' />" />
+    <link rel="stylesheet" href="<c:url value='/template/css/quantri.css' />" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -34,7 +34,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="<c:url value='/admin/thong-tin-tai-khoan' />">
-                        <span class="glyphicon glyphicon-nguoiDung">&nbsp;</span>Xin chào: ${nguoiDungHienTai.tenDangNhap }</a>
+                        <span class="glyphicon glyphicon-nguoiDung">&nbsp;</span>Xin chào: ${NGUOIDUNG.tenDangNhap }</a>
                 </li>
                 <li>
                     <a href="<c:url value='/dang-xuat' />"><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a>

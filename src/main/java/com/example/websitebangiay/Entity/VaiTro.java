@@ -1,16 +1,12 @@
 package com.example.websitebangiay.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Table(name = "vai_tro")
-@lombok.Data
 @Getter
 @Setter
 @AllArgsConstructor
@@ -22,8 +18,6 @@ public class VaiTro implements java.io.Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
-    @Column(name = "ten_vai_tro")
-    private String tenVaiTro;
 
     @Column(name = "ten_vai_tro")
     private String ten;

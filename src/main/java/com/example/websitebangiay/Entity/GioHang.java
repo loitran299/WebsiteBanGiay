@@ -25,8 +25,7 @@ public class GioHang implements java.io.Serializable {
 
     @Column(name = "tong_gia", nullable = false)
     private long tongGia;
-    @Column(name = "id_nguoi_dung")
-    private Long idNguoiDung;
+
 
     @OneToOne
     @JoinColumn(name = "id_nguoi_dung")

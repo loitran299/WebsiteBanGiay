@@ -28,10 +28,7 @@ public class SanPham implements java.io.Serializable {
 
     @Column(name = "ten")
     private String ten;
-    @Column(name = "id_danh_muc")
-    private Long idDanhMuc;
-    @Column(name = "id_nhan_hieu")
-    private Long idNhanHieu;
+
     @Column(name = "gia", nullable = false)
     private long gia;
 

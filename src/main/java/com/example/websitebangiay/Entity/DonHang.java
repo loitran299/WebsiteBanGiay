@@ -25,24 +25,7 @@ public class DonHang implements java.io.Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(name = "address")
-    private String address;
-    @Column(name = "delivery_date")
-    private Date deliveryDate;
-    @Column(name = "full_name")
-    private String fullName;
-    @Column(name = "order_date")
-    private Date orderDate;
-    @Column(name = "order_status")
-    private String orderStatus;
-    @Column(name = "phone_number")
-    private String phoneNumber;
-    @Column(name = "received_date")
-    private Date receivedDate;
-    @Column(name = "total_price", nullable = false)
-    private Long totalPrice;
-    @Column(name = "id_nguoi_dung")
-    private Long idNguoiDung;
+
     @Column(name = "dia_chi")
     private String diaChi;
     @Column(name = "ho_ten")

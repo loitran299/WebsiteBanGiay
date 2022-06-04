@@ -39,25 +39,25 @@
         </div>
         <div class="col-sm-9">
             <div class="row sub-category" id="listSanPham">
-                <%--                <c:forEach items="${cacSanPham}" var="sanPham">--%>
-                <%--                <div class="col-12 col-md-6 col-lg-4 product">--%>
-                <%--                    <div class="card">--%>
-                <%--                        <img class="card-img-top" src="${sanPham.pathAnh}" alt="Card image cap">--%>
-                <%--                        <div class="card-body">--%>
-                <%--                            <h4 class="card-title show_txt"><a href="#" title="View Product">${sanPham.ten}</a></h4>--%>
-                <%--                            <p class="card-text show_txt">${sanPham.nhanHieu.ten}</p>--%>
-                <%--                            <div class="row price-add-to-card">--%>
-                <%--                                <div class="col price">--%>
-                <%--                                    <p class="btn btn-danger btn-block">${sanPham.gia} VND</p>--%>
-                <%--                                </div>--%>
-                <%--                                <div class="col add-to-card">--%>
-                <%--                                    <a href="#" class="btn btn-success btn-block">Thêm vào giỏ hàng</a>--%>
-                <%--                                </div>--%>
-                <%--                            </div>--%>
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                </div>--%>
-                <%--                </c:forEach>--%>
+                                <c:forEach items="${cacSanPham}" var="sanPham">
+                                <div class="col-12 col-md-6 col-lg-4 product">
+                                    <div class="card">
+                                        <img class="card-img-top" src="${sanPham.pathAnh}" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title show_txt"><a href="#" title="View Product">${sanPham.ten}</a></h4>
+                                            <p class="card-text show_txt">${sanPham.nhanHieu.ten}</p>
+                                            <div class="row price-add-to-card">
+                                                <div class="col price">
+                                                    <p class="btn btn-danger btn-block">${sanPham.gia} VND</p>
+                                                </div>
+                                                <div class="col add-to-card">
+                                                    <a href="#" class="btn btn-success btn-block">Thêm vào giỏ hàng</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </c:forEach>
             </div>
         </div>
 

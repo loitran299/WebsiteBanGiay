@@ -41,7 +41,7 @@
             </div>
         </c:if>
         <div class="agileits-top">
-            <form action="${pageContext.request.contextPath}" method="post">
+            <form action="kiem-tra-dang-nhap" method="post">
                 <input class="text" type="text" name="tenDangNhap" placeholder="Tên đăng nhập" required="required"/>
                 <input class="text email" type="password" name="matKhau" placeholder="mật khẩu" required="required">
                 <div class="wthree-text">
@@ -51,6 +51,7 @@
                     </label>
                     <div class="clear"> </div>
                 </div>
+                <input type="hidden" name="action" value="dangnhap">
                 <input type="submit" value="Đăng nhập">
             </form>
             <p>Đã có tài khoản? <a href="/dang-ky"> Đăng ký!</a></p>

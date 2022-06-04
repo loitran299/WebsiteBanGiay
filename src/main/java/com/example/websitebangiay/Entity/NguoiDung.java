@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Set;
 
 @Table(name = "nguoi_dung")
-@lombok.Data
 @Getter
 @Setter
 @AllArgsConstructor
@@ -43,9 +42,9 @@ public class NguoiDung implements java.io.Serializable {
 
 
     @ManyToMany
-    @JoinTable(name = "vaiTro_nguoiDung",
+    @JoinTable(name = "vai_tro_nguoi_dung",
     joinColumns = @JoinColumn(name = "id_nguoi_dung"),
-    inverseJoinColumns = @JoinColumn(name = "id_vaiTro"))
+    inverseJoinColumns = @JoinColumn(name = "id_vai_tro"))
     private Set<VaiTro> vaiTro;
 
     @JsonIgnore

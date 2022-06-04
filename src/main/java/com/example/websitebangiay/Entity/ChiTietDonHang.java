@@ -29,10 +29,6 @@ public class ChiTietDonHang implements java.io.Serializable {
     private long donGia;
     @Column(name = "so_luong", nullable = false)
     private int soLuong;
-    @Column(name = "id_don_hang")
-    private Long idDonHang;
-    @Column(name = "id_san_pham")
-    private Long idSanPham;
 
     @ManyToOne
     @JoinColumn(name = "id_don_hang")

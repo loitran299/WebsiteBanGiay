@@ -62,7 +62,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/lien-he">Liên hệ</a>
                 </li>
-                                <c:if test="${pageContext.request.userPrincipal.name == null}">
+                                <c:if test="${empty NGUOIDUNG}">
                                 <li class="nav-item">
                                     <a class="nav-link" href="<%=request.getContextPath()%>/dang-nhap">Đăng nhập</a>
                                 </li>
@@ -70,9 +70,9 @@
                                         <a class="nav-link" href="<%=request.getContextPath()%>/dang-ky">Đăng ký</a>
                                     </li>
                                 </c:if>
-                                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                                <c:if test="${not empty NGUOIDUNG}">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<%=request.getContextPath()%>/thong-tin-tai-khoan">Xin chào : ${nguoiDungHienTai.tenDangNhap}</a>
+                                        <a class="nav-link" href="<%=request.getContextPath()%>/thong-tin-tai-khoan">Xin chào : ${NGUOIDUNG.tenDangNhap}</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="<%=request.getContextPath()%>/dang-xuat">Đăng xuất</a>
@@ -89,7 +89,7 @@
                         </button>
                     </div>
                 </div>
-                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                <c:if test="${not empty NGUOIDUNG}">
                     <a class="btn btn-success btn-sm ml-3" href="/gio-hang">
                         <i class="fa fa-shopping-cart"></i> Giỏ hàng
                         <span class="badge badge-light" id="soChiMucCuaGioHang"></span>
