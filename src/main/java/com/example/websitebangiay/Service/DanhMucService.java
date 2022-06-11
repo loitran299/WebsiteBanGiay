@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DanhMucService {
     List<DanhMuc> tatCaDanhMuc();
-    void xoaBoiID(Long id);
+    void xoaTheoId(Long id);
     boolean danhMucTonTai(DanhMuc danhMuc);
     void luuDanhMuc(DanhMuc danhMuc);
     DanhMuc timTheoTen(String ten);

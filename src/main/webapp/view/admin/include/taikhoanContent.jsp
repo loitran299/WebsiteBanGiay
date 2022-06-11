@@ -58,7 +58,7 @@
 </div>
 
 <%--</div>--%>
-<script src="/js/admin/taikhoan.js"></script>
+<script src="/template/js/admin/taikhoan.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js"></script>
 
 

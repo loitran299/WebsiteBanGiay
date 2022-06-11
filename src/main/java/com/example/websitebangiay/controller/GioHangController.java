@@ -15,7 +15,7 @@ public class GioHangController extends HttpServlet {
         String path = req.getServletPath();
         if(path.equals("/gio-hang")){
             path = "web/giohang";
-        }else if (path.equals("/xac-nhan-hang")){
+        }else if (path.equals("/xac-nhan-don-hang")){
             path = "web/xacnhandonhang";
         }
         path = "/view/"+path+".jsp";

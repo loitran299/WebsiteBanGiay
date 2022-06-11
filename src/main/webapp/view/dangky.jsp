@@ -22,23 +22,26 @@
     <h1>SIGN UP</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
-            <form method="post" action="dang-ky" >
-
-                <input type="text" path="tenDangNhap" class="text" placeholder="Tên Đăng nhập" required="required"/>
+            <form action="xu-ly-dang-ky" method="post">
+                <c:if test="${param.nguoidungdatontai != null}">
+                    <label for="tenDangNhap" class="error" id="tenDangNhapLabel">Tên đăng nhập đã tồn tại!</label>
+                </c:if>
+                <input type="text" id="tenDangNhap" name="tenDangNhap" class="text" placeholder="Tên Đăng nhập" required="required"/>
 
 <%--                <input class="text" type="text" name="Username" placeholder="Username" required="required">--%>
-
-                <input type="text" path="email" class="email" placeholder="Email" required="required"/>
+                <label for="email" class="error" id="emailLabel"></label>
+                <input type="text" id="email" name="email" class="email" placeholder="Email" required="required"/>
 
 <%--                <input class="text email" type="email" name="email" placeholder="Email" required="required">--%>
 
-                <input type="password" path="matKhau" class="text" placeholder="Mật khẩu" required="required"/>
+                <input type="password" id="matKhau" name="matKhau" class="text" placeholder="Mật khẩu" required="required"/>
 
 <%--                <input class="text" type="password" name="password" placeholder="Password" required="required">--%>
-
-                <input type="password" path="matKhauXacThuc" class="text w3lpass" placeholder="Nhập lại mật khẩu" required="required"/>
+                <label for="matKhauXacThuc" class="error" id="matKhauXacThucLabel"></label>
+                <input type="password" id="matKhauXacThuc" name="matKhauXacThuc" class="text w3lpass" placeholder="Nhập lại mật khẩu" required="required"/>
 
 <%--                <input class="text w3lpass" type="password" name="confirmPassword" placeholder="Confirm Password" required="required">--%>
+                <input type="hidden" name="action" value="dangky">
                 <div class="wthree-text">
                     <label class="anim">
                         <input type="checkbox" class="checkbox">
@@ -53,4 +56,26 @@
     </div>
 </div>
 </body>
+<script>
+    const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    const email = document.getElementById("email");
+    email.addEventListener("blur", function () {
+        const lb = document.getElementById("emailLabel");
+        if (filter.test(email.value)){
+            lb.innerText = "";
+        }else{
+            lb.innerText = "Email sai định dạng!";
+        }
+    })
+    const matKhauXacThuc = document.getElementById("matKhauXacThuc");
+    matKhauXacThuc.addEventListener("mouseleave", function () {
+        const matKhau = document.getElementById("matKhau");
+        const lb = document.getElementById("matKhauXacThucLabel");
+        if (matKhau.value == matKhauXacThuc.value){
+            lb.innerText = "";
+        }else{
+            lb.innerText = "Mật khẩu không khớp!";
+        }
+    })
+</script>
 </html>

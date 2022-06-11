@@ -26,18 +26,23 @@
 
     <div class="main-agileinfo">
         <c:if test="${param.loi != null}">
-            <div class="alert alert-danger" vaiTro="alert">
+            <div class="alert alert-danger" role="alert">
                 Tên đăng nhập hoặc mật khẩu không đúng!
             </div>
         </c:if>
         <c:if test="${param.dangxuat != null}">
-            <div class="alert alert-success" vaiTro="alert">
+            <div class="alert alert-success" role="alert">
                 Đăng xuất thành công!
             </div>
         </c:if>
         <c:if test="${param.khongthetruycap != null}">
-            <div class="alert alert-warning" vaiTro="alert">
+            <div class="alert alert-warning" role="alert">
                 Không thể truy cập trang này!
+            </div>
+        </c:if>
+        <c:if test="${param.chuadangnhap != null}">
+            <div class="alert alert-warning" role="alert">
+                Vui lòng đăng nhập!
             </div>
         </c:if>
         <div class="agileits-top">

@@ -5,6 +5,7 @@ import com.example.websitebangiay.Utils.JpaUtils;
 
 import javax.annotation.ManagedBean;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import java.util.List;
 
 @ManagedBean
@@ -22,7 +23,15 @@ public class DanhMucRepository {
     }
 
     public void save(DanhMuc danhMuc){
-        entityManager.persist(danhMuc);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(danhMuc);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     public DanhMuc findById(Long id){
@@ -30,13 +39,27 @@ public class DanhMucRepository {
     }
 
     public DanhMuc findByTen (String ten) {
-        return (DanhMuc) entityManager.createQuery("SELECT nh FROM DanhMuc nh WHERE nh.ten = :ten")
-                .setParameter("ten", ten)
-                .getSingleResult();
+        DanhMuc danhMuc = null;
+        try {
+            danhMuc = (DanhMuc) entityManager.createQuery("SELECT nh FROM DanhMuc nh WHERE nh.ten = :ten")
+                    .setParameter("ten", ten)
+                    .getSingleResult();
+        }catch (NoResultException e){
+            System.out.println(e.getMessage());
+        }
+        return danhMuc;
     }
 
 
     public void deleteById(Long id){
-        entityManager.createQuery("DELETE FROM DanhMuc nh WHERE nh.id = :id").setParameter("id",id);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM DanhMuc nh WHERE nh.id = :id").setParameter("id",id).executeUpdate();
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 }

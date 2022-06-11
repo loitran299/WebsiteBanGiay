@@ -1,34 +1,29 @@
 package com.example.websitebangiay.Dto;
 
-import lombok.Data;
+import lombok.*;
 
 
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.Part;
+import java.io.File;
 import java.io.Serializable;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class SanPhamDto implements Serializable {
-    private final Long id;
-    private final String ten;
-    private final long gia;
-    private final String gioiTinh;
-    private final String mauSac;
-    private final int soLuong;
-    private final String moTa;
+    private Long id;
+    private String ten;
+    private Long gia;
+    private String gioiTinh;
+    private String mauSac;
+    private Integer soLuong;
+    private String moTa;
     private Long danhMuc;
     private Long nhanHieu;
-    private Part anh;
+    private File anh;
+    private String path;
 
-    public SanPhamDto(Long id, String ten, long gia, String gioiTinh, String mauSac, int soLuong, String moTa, Long danhMuc, Long nhanHieu, Part anh) {
-        this.id = id;
-        this.ten = ten;
-        this.gia = gia;
-        this.gioiTinh = gioiTinh;
-        this.mauSac = mauSac;
-        this.soLuong = soLuong;
-        this.moTa = moTa;
-        this.danhMuc = danhMuc;
-        this.nhanHieu = nhanHieu;
-        this.anh = anh;
-    }
 }

@@ -23,7 +23,14 @@ public class SanPhamRepository {
     }
 
     public void save(SanPham sanPham){
-        entityManager.persist(sanPham);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(sanPham);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
     }
 
     public SanPham findById(Long id){
@@ -33,8 +40,25 @@ public class SanPhamRepository {
 
 
     public void deleteById(Long id){
-        entityManager.createQuery("DELETE FROM SanPham sp WHERE sp.id = :id").setParameter("id",id);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM SanPham sp WHERE sp.id = :id").setParameter("id",id).executeUpdate();
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
 
+    public SanPham findSanPhamByTen(String ten) {
+        SanPham sp = null;
+        try {
+            sp = (SanPham) entityManager.createQuery("SELECT sp FROM SanPham sp WHERE sp.ten = :ten").setParameter("ten", ten).getSingleResult();
+        }catch (Exception e) {
+
+        }
+        return sp;
+    }
 }

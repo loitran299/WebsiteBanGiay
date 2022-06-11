@@ -37,4 +37,4 @@
     </ul>
 </div>
 
-<script src="/js/admin/danhmuc.js"></script>
+<script src="/template/js/admin/danhmuc.js"></script>

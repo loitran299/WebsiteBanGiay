@@ -1,5 +1,5 @@
 
-const url = "http://localhost:8080/api/brand/get/all";
+const url = "http://localhost:8080/api/nhanhieu/get/all";
 
 function start() {
     layNhanHieu(xuatHTML);
@@ -32,7 +32,7 @@ function xuatHTML(cacNhanHieu) {
 }
 
 function onDeleteBrand(id) {
-    const deleteApi = "http://localhost:8080/api/brand/delete/"+id;
+    const deleteApi = "http://localhost:8080/api/nhanhieu/delete/"+id;
     fetch(deleteApi,{
         method:"DELETE"
     })
@@ -53,7 +53,7 @@ document.getElementById("form_them_nhan_hieu").addEventListener("submit",functio
     if(ten.value === ""){
         alert("Tên nhãn hiệu không được để trống!");
     }else{
-        const themNhanHieuApi = "http://localhost:8080/api/brand/save";
+        const themNhanHieuApi = "http://localhost:8080/api/nhanhieu/save";
         fetch(themNhanHieuApi,{
             method:"POST",
             body: JSON.stringify(nhanHieuJson),

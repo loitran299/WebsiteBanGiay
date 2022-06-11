@@ -19,7 +19,7 @@ public class DanhMucServiceImpl implements DanhMucService {
     }
 
     @Override
-    public void xoaBoiID(Long id) {
+    public void xoaTheoId(Long id) {
         danhMucRepository.deleteById(id);
     }
 

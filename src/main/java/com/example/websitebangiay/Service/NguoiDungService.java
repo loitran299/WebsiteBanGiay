@@ -14,7 +14,7 @@ public interface NguoiDungService {
     List<NguoiDung> getAll();
     void deleteById(Long id);
     NguoiDung getById(Long id);
-    void updateUser(NguoiDungDto user);
-    void saveUser(NguoiDungDto user);
+    void update(NguoiDungDto user);
+    void save(NguoiDungDto user);
     void updateNguoiDung(NguoiDung nguoiDung);
 }

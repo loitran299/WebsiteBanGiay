@@ -63,7 +63,7 @@ public class NguoiDungServiceImpl implements NguoiDungService {
     }
 
     @Override
-    public void updateUser(NguoiDungDto user) {
+    public void update(NguoiDungDto user) {
         NguoiDung oldNguoiDung = nguoiDungRepository.findByTenDangNhap(user.getTenDangNhap());
         if (!Objects.equals(user.getMatKhau(), "")) {
             oldNguoiDung.setMatKhau(user.getMatKhau());
@@ -75,7 +75,7 @@ public class NguoiDungServiceImpl implements NguoiDungService {
     }
 
     @Override
-    public void saveUser(NguoiDungDto nguoiDungDto) {
+    public void save(NguoiDungDto nguoiDungDto) {
         NguoiDung nguoiDung = new NguoiDung();
         nguoiDung.setTenDangNhap(nguoiDungDto.getTenDangNhap());
         nguoiDung.setMatKhau(nguoiDungDto.getMatKhau());

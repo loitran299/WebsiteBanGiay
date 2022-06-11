@@ -17,20 +17,20 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="tenDangNhap">Tên đăng nhập</label>
-                            <input type="text" id="tenDangNhap" class="form-control" value="${nguoiDungHienTai.tenDangNhap}" readonly/>
+                            <input type="text" id="tenDangNhap" class="form-control" value="${NGUOIDUNG.tenDangNhap}" readonly/>
                         </div>
                         <div class="form-group col-md-5">
                             <label for="hoTen">Họ và tên</label>
-                            <input type="text" id="hoTen" class="form-control" value="${nguoiDungHienTai.hoTen}" />
+                            <input type="text" id="hoTen" class="form-control" value="${NGUOIDUNG.hoTen}" />
                         </div>
                     </div>
                     <div class="form-group col-md-9">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" value="${nguoiDungHienTai.email}" />
+                        <input type="email" class="form-control" id="email" value="${NGUOIDUNG.email}" />
                     </div>
                     <div class="form-group col-md-9">
                         <label for="diaChi">Địa chỉ</label>
-                        <input type="text" class="form-control" id="diaChi" value="${nguoiDungHienTai.diaChi}" />
+                        <input type="text" class="form-control" id="diaChi" value="${NGUOIDUNG.diaChi}" />
                     </div>
                     <hr class="my-4" />
                     <div class="row mb-4">
@@ -54,4 +54,4 @@
 
 </div>
 
-<script src="/js/web/thongtin.js"></script>
+<script src="/template/js/web/thongtin.js"></script>

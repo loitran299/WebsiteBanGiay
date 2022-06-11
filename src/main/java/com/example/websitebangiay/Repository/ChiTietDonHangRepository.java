@@ -17,9 +17,16 @@ public class ChiTietDonHangRepository {
         super.finalize();
     }
     public ChiTietDonHang save(ChiTietDonHang chiTietDonHang){
-        entityManager.persist(chiTietDonHang);
-        entityManager.flush();
-        System.out.println("Khong luu chi tiet don hang");
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(chiTietDonHang);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            System.out.println("Khong luu chi tiet don hang");
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
         return chiTietDonHang;
     }
 

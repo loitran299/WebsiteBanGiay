@@ -1,5 +1,5 @@
 
-const url = "http://localhost:8080/api/danh-muc/get/cac-danh-muc";
+const url = "http://localhost:8080/api/danhmuc/get/all";
 
 function start() {
     layCacDanhMuc(xuatHTML);
@@ -32,7 +32,7 @@ function xuatHTML(cacDanhMuc) {
 }
 
 function onDeleteBrand(id) {
-    const deleteApi = "http://localhost:8080/api/danh-muc/xoa/"+id;
+    const deleteApi = "http://localhost:8080/api/danhmuc/delete/"+id;
     fetch(deleteApi,{
         method:"DELETE"
     })
@@ -53,7 +53,7 @@ document.getElementById("form_them_danh_muc").addEventListener("submit",function
     if(ten.value === ""){
         alert("Tên danh mục không được để trống!");
     }else{
-        const themNhanHieuApi = "http://localhost:8080/api/danh-muc/them";
+        const themNhanHieuApi = "http://localhost:8080/api/danhmuc/save";
         fetch(themNhanHieuApi,{
             method:"POST",
             body: JSON.stringify(nhanHieuJson),

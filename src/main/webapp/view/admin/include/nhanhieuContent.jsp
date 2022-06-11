@@ -37,4 +37,4 @@
     </ul>
 </div>
 
-<script src="/js/admin/nhanhieu.js"></script>
+<script src="/template/js/admin/nhanhieu.js"></script>

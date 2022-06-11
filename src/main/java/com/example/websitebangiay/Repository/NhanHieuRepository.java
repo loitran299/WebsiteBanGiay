@@ -6,6 +6,7 @@ import com.example.websitebangiay.Utils.JpaUtils;
 
 import javax.annotation.ManagedBean;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import java.util.List;
 
 @ManagedBean
@@ -22,7 +23,15 @@ public class NhanHieuRepository {
     }
 
     public void save(NhanHieu nhanHieu){
-        entityManager.persist(nhanHieu);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(nhanHieu);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     public NhanHieu findById(Long id){
@@ -30,12 +39,27 @@ public class NhanHieuRepository {
     }
 
     public NhanHieu findByTen (String ten) {
-        return (NhanHieu) entityManager.createQuery("SELECT nh FROM NhanHieu nh WHERE nh.ten = :ten")
-                .setParameter("ten", ten)
-                .getSingleResult();
+        NhanHieu nhanHieu = null;
+        try {
+            nhanHieu = (NhanHieu) entityManager.createQuery("SELECT nh FROM NhanHieu nh WHERE nh.ten = :ten")
+                    .setParameter("ten", ten)
+                    .getSingleResult();
+        }catch (NoResultException e){
+            System.out.println(e.getMessage());
+//            return null;
+        }
+        return nhanHieu;
     }
 
     public void deleteById(Long id){
-        entityManager.createQuery("DELETE FROM NhanHieu nh WHERE nh.id = :id").setParameter("id",id);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM NhanHieu nh WHERE nh.id = :id").setParameter("id",id).executeUpdate();
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 }

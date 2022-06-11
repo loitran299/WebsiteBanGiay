@@ -85,4 +85,11 @@ public class NguoiDung implements java.io.Serializable {
     public void setVaiTro(Set<VaiTro> vaiTro) {
         this.vaiTro = vaiTro;
     }
+
+    public boolean laAdmin() {
+        for (VaiTro vaiTro : vaiTro){
+            if (vaiTro.getTen().equals("ROLE_ADMIN")) return true;
+        }
+        return false;
+    }
 }

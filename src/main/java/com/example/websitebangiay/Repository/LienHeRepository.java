@@ -23,14 +23,28 @@ public class LienHeRepository {
     }
 
     public LienHe save(LienHe lienHe) {
-        entityManager.persist(lienHe);
-        entityManager.flush();
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(lienHe);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
         return lienHe;
     }
 
     public void deleteById(Long id) {
-        entityManager.createQuery("DELETE FROM LienHe lh WHERE lh.id = :id")
-                .setParameter("id", id);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM LienHe lh WHERE lh.id = :id")
+                    .setParameter("id", id);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     public LienHe findById(Long id) {

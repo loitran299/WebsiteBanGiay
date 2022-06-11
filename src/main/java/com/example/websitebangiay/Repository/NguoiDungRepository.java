@@ -22,12 +22,29 @@ public class NguoiDungRepository {
         return entityManager.createQuery("select nd from NguoiDung nd").getResultList();
     }
 
+
     public void save(NguoiDung nguoiDung){
-        entityManager.persist(nguoiDung);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(nguoiDung);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     public void update(NguoiDung nguoiDung){
-        entityManager.merge(nguoiDung);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(nguoiDung);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     public NguoiDung findById(Long id){
@@ -48,7 +65,15 @@ public class NguoiDungRepository {
     }
 
     public void deleteById(Long id){
-        entityManager.createQuery("DELETE FROM NguoiDung nd WHERE nd.id = :id").setParameter("id",id);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM NguoiDung nd WHERE nd.id = :id").setParameter("id",id).executeUpdate();
+            System.out.println("da xoa tai khoan");
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
     }
 
 

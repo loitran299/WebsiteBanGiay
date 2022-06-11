@@ -27,6 +27,7 @@ public class SanPhamServiceImpl implements SanPhamService {
     @Inject
     private DanhMucService danhMucService;
 
+    @Inject
     private ServletContext app;
 
     @Override
@@ -36,40 +37,43 @@ public class SanPhamServiceImpl implements SanPhamService {
 
     @Override
     public void luuSanPham(SanPham sanPham) {
-//        sanPhamRepository.save(sanPham);
+        sanPhamRepository.save(sanPham);
     }
 
     @Override
     public boolean sanPhamTonTai(String ten) {
-//        if(sanPhamRepository.findSanPhamByTen(ten) != null) return true;
-//        return false;
+        if(sanPhamRepository.findSanPhamByTen(ten) != null) return true;
         return false;
     }
 
     @Override
-    public Long luuSanPham(SanPhamDto sanPhamDto) {
+    public SanPham luuSanPham(SanPhamDto sanPhamDto) {
         SanPham sanPham = new SanPham();
         sanPham.setTen(sanPhamDto.getTen());
         sanPham.setGia(sanPhamDto.getGia());
-        System.out.println("nhan hieu: "+nhanHieuService.timTheoId(sanPhamDto.getNhanHieu()));
-        sanPham.setNhanHieu(nhanHieuService.timTheoId(sanPhamDto.getNhanHieu()));
-        sanPham.setDanhMuc(danhMucService.timTheoId(sanPhamDto.getDanhMuc()));
-
         sanPham.setMauSac(sanPhamDto.getMauSac());
         sanPham.setGioiTinh(sanPhamDto.getGioiTinh());
         sanPham.setMoTa(sanPhamDto.getMoTa());
         sanPham.setSoLuong(sanPhamDto.getSoLuong());
+        try {
+            sanPham.setNhanHieu(nhanHieuService.timTheoId(sanPhamDto.getNhanHieu()));
+            sanPham.setDanhMuc(danhMucService.timTheoId(sanPhamDto.getDanhMuc()));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         sanPhamRepository.save(sanPham);
-        sanPham.setPathAnh("/img/" +sanPham.getId()+ sanPhamDto.getAnh().getName());
+        sanPham.setPathAnh("/template/img/" +sanPham.getId()+ sanPhamDto.getPath());
         sanPhamRepository.save(sanPham);
-        return sanPham.getId();
+        return sanPham;
     }
 
     @Override
     public void xoaSanPham(Long id) {
         SanPham sanPham = sanPhamRepository.findById(id);
         String path = app.getRealPath("/");
-        String filePath = path + "/WEB-INF/template"+sanPham.getPathAnh();
+        String filePath = path+sanPham.getPathAnh();
         File file = new File(filePath);
         file.delete();
         sanPhamRepository.deleteById(id);

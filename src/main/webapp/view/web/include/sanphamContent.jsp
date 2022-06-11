@@ -24,7 +24,7 @@
                     <c:forEach items="${cacNhanHieu}" var="nhanHieu">
                         <li class="list-group-item text-black font-weight-bold" onclick="khiClickNhanHieu(${nhanHieu.id})">${nhanHieu.ten}</li>
                     </c:forEach>
-                    <input type="hidden" value="${idCategory}" id="idDanhMuc">
+                    <input type="hidden" value="${idDanhMuc}" id="idDanhMuc">
                 </ul>
             </div>
             <div class="card bg-light mb-3">
@@ -72,5 +72,5 @@
 </div>
 
 
-<script src="/js/web/sanpham.js"></script>
-<script src="/js/web/themsanpham.js"></script>
+<script src="/template/js/web/sanpham.js"></script>
+<script src="/template/js/web/themsanpham.js"></script>

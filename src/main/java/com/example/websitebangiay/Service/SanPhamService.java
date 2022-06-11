@@ -10,7 +10,7 @@ public interface SanPhamService {
     List<SanPham> tatCaSanPham();
     void luuSanPham(SanPham sanPham);
     boolean sanPhamTonTai(String ten);
-    Long luuSanPham(SanPhamDto sanPhamDto);
+    SanPham luuSanPham(SanPhamDto sanPhamDto);
     void xoaSanPham(Long id);
     SanPham timTheoId(Long id);
 }

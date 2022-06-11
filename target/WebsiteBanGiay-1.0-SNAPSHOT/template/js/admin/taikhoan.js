@@ -1,5 +1,5 @@
 
-const url = "http://localhost:8080/api/account/get/all";
+const url = "http://localhost:8080/api/taikhoan/get/all";
 
 function load() {
     layTaiKhoan(xuatHTML);
@@ -43,7 +43,7 @@ function xuatHTML(taiKhoans) {
 }
 
 function onDeleteAccount(id){
-    const xoaTaiKhoanApi = "http://localhost:8080/api/account/delete/" + id;
+    const xoaTaiKhoanApi = "http://localhost:8080/api/taikhoan/delete/" + id;
     fetch(xoaTaiKhoanApi,{
         method:"DELETE"
     })
@@ -76,7 +76,7 @@ document.getElementById("form_them_tai_khoan").addEventListener("submit",functio
     if (matKhau.value === ''){
         alert("Mật khẩu không được để trống!");
     }else {
-        const url = "http://localhost:8080/api/account/save";
+        const url = "http://localhost:8080/api/taikhoan/save";
         fetch(url, {
             method: "POST",
             body: JSON.stringify(data),

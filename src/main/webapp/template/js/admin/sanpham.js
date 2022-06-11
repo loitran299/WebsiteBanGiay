@@ -33,7 +33,7 @@ function xuatHTML(sanPhams) {
 }
 
 function xoaSanPham(id) {
-    const xoaSanPhamApi = "http://localhost:8080/api/sanpham/xoa/"+id;
+    const xoaSanPhamApi = "http://localhost:8080/api/sanpham/delete/"+id;
     fetch(xoaSanPhamApi,{
         method:"DELETE"
     })
@@ -44,13 +44,12 @@ function xoaSanPham(id) {
             alert(doiTuongTraVe.thongBao);
             laySanPhams(xuatHTML);
         })
-
 }
 
 document.getElementById("form_them_san_pham").addEventListener("submit",function (e){
     e.preventDefault();
     const data = new FormData();
-    data.append("ten",document.getElementById("tenSanPham").value);
+    data.append("ten",document.getElementById("tenSanPham").value, "ten");
     data.append("gia",document.getElementById("gia").value);
     data.append("gioiTinh",document.getElementById("gioiTinh").value);
     data.append("mauSac",document.getElementById("mauSac").value);
@@ -59,13 +58,26 @@ document.getElementById("form_them_san_pham").addEventListener("submit",function
     data.append("danhMuc",document.getElementById("danhMuc").value);
     data.append("nhanHieu",document.getElementById("nhanHieu").value);
     data.append("anh",document.getElementById("hinhAnh").files[0]);
-    var url = "http://localhost:8080/api/sanpham/luu";
+    const url = "http://localhost:8080/api/sanpham/luu";
+    const json = {
+        "ten":document.getElementById("tenSanPham").value,
+        "gia":document.getElementById("gia").value,
+        "gioiTinh":document.getElementById("gioiTinh").value,
+        "mauSac":document.getElementById("mauSac").value,
+        "soLuong":document.getElementById("soLuong").value,
+        "moTa":document.getElementById("moTa").value,
+        "danhMuc":document.getElementById("danhMuc").value,
+        "nhanHieu":document.getElementById("nhanHieu").value
+    }
     fetch(url,{
         method:"POST",
         body: data
         // headers: {
+        //     "Content-Type": "application/json; charset=UTF-8"
+        // }
+        // headers: {
         //     "Content-Type": "multipart/form-data"
-        // },
+        // }
         // mode : "no-cors"
     })
         .then(function (response){

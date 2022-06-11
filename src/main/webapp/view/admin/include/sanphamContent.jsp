@@ -40,7 +40,7 @@
         </div>
         <div class="form-group col-md-3">
             <label for="hinhAnh">Hình ảnh</label>
-            <input type="file" id="hinhAnh" name="anh" required>
+            <input type="file" id="hinhAnh" name="file" required>
         </div>
         <div class="form-row">
 
@@ -98,7 +98,7 @@
 </div>
 
 <%--</div>--%>
-<script src="/js/admin/sanpham.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js"></script>
+<script src="/template/js/admin/sanpham.js"></script>
+<%--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.js"></script>--%>
 
 

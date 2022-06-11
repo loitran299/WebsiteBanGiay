@@ -21,22 +21,41 @@ public class ChiMucGioHangRepository {
     }
 
     public ChiMucGioHang findChiMucGioHangBySanPhamAndGioHang(SanPham sp, GioHang gh) {
-        return (ChiMucGioHang) entityManager.createQuery("SELECT cm FROM ChiMucGioHang cm WHERE cm.sanPham = :sp AND cm.gioHang = :gh")
-                .setParameter("sp", sp)
-                .setParameter("gh", gh)
-                .getSingleResult();
+        ChiMucGioHang chiMucGioHang = null;
+        try {
+            chiMucGioHang = (ChiMucGioHang) entityManager.createQuery("SELECT cm FROM ChiMucGioHang cm WHERE cm.sanPham = :sp AND cm.gioHang = :gh")
+                    .setParameter("sp", sp)
+                    .setParameter("gh", gh)
+                    .getSingleResult();
+        }catch (Exception e){
+
+        }
+
+        return chiMucGioHang;
     }
 
     public ChiMucGioHang save(ChiMucGioHang chiMucGioHang) {
-        entityManager.persist(chiMucGioHang);
-        entityManager.flush();
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(chiMucGioHang);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
         return chiMucGioHang;
     }
 
     public List findChiMucGioHangsByGioHang(GioHang gioHang) {
-        return entityManager.createQuery("SELECT cm FROM ChiMucGioHang cm WHERE cm.gioHang = :gh")
-                .setParameter("gh", gioHang)
-                .getResultList();
+        List list = null;
+        try {
+            list = entityManager.createQuery("SELECT cm FROM ChiMucGioHang cm WHERE cm.gioHang = :gh")
+                    .setParameter("gh", gioHang)
+                    .getResultList();
+        }catch (Exception e){
+
+        }
+        return list;
     }
 
     public ChiMucGioHang findById(Long id) {
@@ -44,11 +63,26 @@ public class ChiMucGioHangRepository {
     }
 
     public void deleteById(Long id) {
-        entityManager.createQuery("DELETE FROM ChiMucGioHang cm WHERE cm.id = :id")
-                .setParameter("id", id);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM ChiMucGioHang cm WHERE cm.id = :id")
+                    .setParameter("id", id).executeUpdate();
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+
     }
 
     public void delete(ChiMucGioHang chiMucGioHang) {
-        entityManager.remove(chiMucGioHang);
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.remove(chiMucGioHang);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
     }
 }

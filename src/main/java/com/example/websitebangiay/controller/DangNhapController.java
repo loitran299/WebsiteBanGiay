@@ -23,12 +23,9 @@ public class DangNhapController extends HttpServlet {
     @Inject
     private VaiTroService vaiTroService;
 
-    @Inject
-    private SessionUtils sessionUtils;
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     }
 
     @Override
@@ -53,18 +50,12 @@ public class DangNhapController extends HttpServlet {
                     response.sendRedirect(request.getContextPath() + "/dang-nhap?loi");
                     return;
                 }else{
-                    sessionUtils.putValue(request ,"NGUOIDUNG", nguoiDung);
-                    boolean check = false;
-                    for (VaiTro i : nguoiDung.getVaiTro()){
-                        if(i.getTen().equals("ROLE_ADMIN")) check = true;
-                    }
-
-                    if (check){
+                    SessionUtils.putValue(request ,"NGUOIDUNG", nguoiDung);
+                    if (nguoiDung.laAdmin()){
                         response.sendRedirect(request.getContextPath()+"/admin/trang-quan-tri");
                     }else{
                         response.sendRedirect(request.getContextPath()+"/trang-chu");
                     }
-
                 }
             }
         }

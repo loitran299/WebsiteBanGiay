@@ -1,27 +1,22 @@
 package com.example.websitebangiay.Dto;
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class NguoiDungDto implements Serializable {
-    private final Long id;
-    private final String hoTen;
-    private final String tenDangNhap;
-    private final String email;
-    private final String diaChi;
+    private Long id;
+    private String hoTen;
+    private String tenDangNhap;
+    private String email;
+    private String diaChi;
     private String matKhau;
-    private final String tenVaiTro;
+    private String tenVaiTro;
 
-    public NguoiDungDto(Long id, String hoTen, String tenDangNhap, String email, String diaChi, String tenVaiTro){
-        this.id = id;
-        this.hoTen = hoTen;
-        this.tenDangNhap = tenDangNhap;
 
-        this.email = email;
-        this.diaChi = diaChi;
-        this.tenVaiTro = tenVaiTro;
-    }
 }

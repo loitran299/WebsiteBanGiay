@@ -1,5 +1,9 @@
 package com.example.websitebangiay.controller;
 
+import com.example.websitebangiay.Service.DanhMucService;
+import com.example.websitebangiay.Service.NhanHieuService;
+
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +23,11 @@ import java.io.IOException;
                 "/admin/lien-he",
                 "/admin/quan-ly-tai-khoan"})
 public class QuanTriController extends HttpServlet {
+    @Inject
+    private DanhMucService danhMucService;
+
+    @Inject
+    private NhanHieuService nhanHieuService;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = req.getServletPath();
@@ -32,6 +41,8 @@ public class QuanTriController extends HttpServlet {
             path = "admin/danhmuc";
         }else if(path.equals("/admin/san-pham")){
             path = "admin/sanpham";
+            req.setAttribute("cacNhanHieu", nhanHieuService.getAll());
+            req.setAttribute("cacDanhMuc", danhMucService.tatCaDanhMuc());
         }else if (path.equals("/admin/don-hang")){
             path = "admin/donhang";
         }else if (path.equals("/admin/lien-he")){

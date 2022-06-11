@@ -3,9 +3,9 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
-<link rel="stylesheet" href="/css/chitietsanpham.css">
+<link rel="stylesheet" href="/template/css/chitietsanpham.css">
 <% DecimalFormat formatter = new DecimalFormat("###,###,###");
-    pageContext.setAttribute("formatter",formatter);
+    request.setAttribute("formatter",formatter);
 %>
 <div class="container">
     <div class="card">
@@ -67,5 +67,5 @@
         </div>
     </div>
 </div>
-<script src="/js/web/themsanpham.js"></script>
-<script src="/js/web/sanpham.js"></script>
+<script src="/template/js/web/themsanpham.js"></script>
+<script src="/template/js/web/sanpham.js"></script>

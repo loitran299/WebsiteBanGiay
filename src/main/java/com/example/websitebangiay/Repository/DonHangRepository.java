@@ -20,10 +20,16 @@ public class DonHangRepository {
         return entityManager.createQuery("select sp from SanPham sp").getResultList();
     }
 
-    public DonHang save(DonHang sanPham){
-        entityManager.persist(sanPham);
-        entityManager.flush();
-        return sanPham;
+    public DonHang save(DonHang donHang){
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(donHang);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+        return donHang;
     }
 
     public DonHang findById(Long id) {

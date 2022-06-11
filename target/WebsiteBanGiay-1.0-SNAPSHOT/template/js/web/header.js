@@ -1,6 +1,8 @@
 function soLuongChiMucGioHang() {
-    var url = "http://localhost:8080/api/giohang/lay/giohangnguoidunghientai";
-    fetch(url)
+    var url = "http://localhost:8080/api/giohang/get";
+    fetch(url, {
+        method:'GET'
+    })
         .then(function (response) {
             return response.json();
         })

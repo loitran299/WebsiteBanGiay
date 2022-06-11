@@ -52,5 +52,5 @@
 </div>
 
 
-<script src="/js/web/timkiem.js"></script>
-<script src="/js/web/themsanpham.js"></script>
+<script src="/template/js/web/timkiem.js"></script>
+<script src="/template/js/web/themsanpham.js"></script>

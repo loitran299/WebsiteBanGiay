@@ -54,7 +54,7 @@ function xuatHTML(sanPhams) {
                     <div class="card">
                         <img class="card-img-top" src="${sanPham.pathAnh}" alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title show_txt"><a href="/chi-tiet-san-pham?id=${sanPham.id}" title="View Product">${sanPham.ten}</a></h4>
+                            <h6 class="card-title show_txt"><a href="/chi-tiet-san-pham?id=${sanPham.id}" title="View Product">${sanPham.ten}</a></h6>
                             <p class="card-text show_txt">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
                             <div class="row price-add-to-card">
                                 <div class="col price">
@@ -117,7 +117,7 @@ function khiClickNhanHieu(id) {
 }
  function khiClickDanhMuc(id){
     if(id === 0) window.location = "http://localhost:8080/trang-san-pham";
-    window.location = "http://localhost:8080/trang-san-pham?idCategory="+id;
+    window.location = "http://localhost:8080/trang-san-pham?idDanhMuc="+id;
      // var sanPhamTheoDanhMuc = [];
      // const fun = listSanPham.map(function (sanPham) {
      //     if(sanPham.danhMuc.id === id){
