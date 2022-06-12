@@ -2,7 +2,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="/template/css/style.css" rel="stylesheet" type="text/css"/>
 <div class="shopping-cart">
     <div class="px-4 px-lg-0">
 
@@ -83,7 +83,7 @@
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng thanh toán</strong>
                                     <h5 class="font-weight-bold" id="tongThanhToan">0 đ</h5>
                                 </li>
-                            </ul><a href="/xac-nhan-don-hang" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
+                            </ul><a href="${pageContext.request.contextPath}/xac-nhan-don-hang" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
                         </div>
                     </div>
                 </div>
@@ -92,8 +92,8 @@
         </div>
     </div>
 </div>
-<script src="/js/web/giohang.js"></script>
-<script src="/js/web/sanpham.js"></script>
+<script src="/template/js/web/giohang.js"></script>
+<script src="/template/js/web/sanpham.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

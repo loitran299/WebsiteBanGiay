@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface DonHangService {
     DonHang luuDonHang(DonHang donHang);
+    DonHang updateDonHang(DonHang donHang);
     List<DonHang> layTatCaDonHang();
     void hoanThanhDonHang(Long id);
 }

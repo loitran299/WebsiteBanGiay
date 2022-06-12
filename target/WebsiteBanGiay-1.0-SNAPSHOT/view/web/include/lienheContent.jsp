@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
-<link rel="stylesheet" href="/css/lienhe.css">
+<link rel="stylesheet" href="/template/css/lienhe.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
 
 <div class="container">
@@ -51,4 +51,4 @@
     </div>
 </div>
 <script src="/js/web/lienhe.js"></script>
-<script src="/js/web/sanpham.js"></script>
+<script src="/template/js/web/sanpham.js"></script>

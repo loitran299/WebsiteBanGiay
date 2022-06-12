@@ -5,7 +5,7 @@ function load() {
 load();
 
 function layGioHang(goilai) {
-    var url = "http://localhost:8080/api/giohang/lay/giohangnguoidunghientai";
+    var url = "http://localhost:8080/api/giohang/get";
     fetch(url)
         .then(function (response) {
             return response.json();
@@ -62,9 +62,9 @@ function xuatGioHang(chiMucs) {
 function thayDoiSoLuong(id , sl) {
     if (sl > 0){
         console.log("id"+id,"sl: "+sl);
-        url = `http://localhost:8080/api/giohang/thaydoi/chimuc?id=${id}&soLuong=${sl}`;
+        url = `http://localhost:8080/api/giohang/update/chimuc?id=${id}&soLuong=${sl}`;
         fetch(url,{
-            method:"POST"
+            method:"PUT"
         })
             .then(function (response) {
                 return response.json();
@@ -81,7 +81,7 @@ function thayDoiSoLuong(id , sl) {
 function xoaChiMuc(id) {
     url = `http://localhost:8080/api/giohang/xoa/chimuc/`+id;
     fetch(url,{
-        method:"POST"
+        method:"DELETE"
     })
         .then(function (response) {
             if(response.ok){

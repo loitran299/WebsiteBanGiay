@@ -4,7 +4,7 @@
 
 
 <% DecimalFormat formatter = new DecimalFormat("###,###,###");
-    pageContext.setAttribute("formatter",formatter);
+    request.setAttribute("formatter",formatter);
 %>
 
 <div class="container mt-5 mb-5">

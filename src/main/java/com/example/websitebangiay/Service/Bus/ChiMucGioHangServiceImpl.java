@@ -27,7 +27,7 @@ public class ChiMucGioHangServiceImpl implements ChiMucGioHangService {
     }
 
     @Override
-    public List<ChiMucGioHang> timTheoGiohang(GioHang gioHang) {
+    public List timTheoGiohang(GioHang gioHang) {
         return chiMucGioHangRepository.findChiMucGioHangsByGioHang(gioHang);
     }
 

@@ -73,13 +73,25 @@
         type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
 ></script>
+<%--<script--%>
+<%--        type="text/javascript"--%>
+<%--        src="https://code.jquery.com/jquery-1.11.0.min.js"--%>
+<%--></script>--%>
+<%--<script--%>
+<%--        type="text/javascript"--%>
+<%--        src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"--%>
+<%--></script>--%>
+<%--<script--%>
+<%--        type="text/javascript"--%>
+<%--        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"--%>
+<%--></script>--%>
 
-<script
-        type="module"
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-        nomodule
-        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<%--<script--%>
+<%--        type="module"--%>
+<%--        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"--%>
+<%--></script>--%>
+<%--<script--%>
+<%--        nomodule--%>
+<%--        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>--%>
 <script src="/template/js/web/home.js"></script>
 

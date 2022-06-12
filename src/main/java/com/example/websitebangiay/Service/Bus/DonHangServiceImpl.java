@@ -13,6 +13,7 @@ import java.util.List;
 
 @ManagedBean
 public class DonHangServiceImpl implements DonHangService {
+
     @Inject
     private DonHangRepository donHangRepository;
 
@@ -22,7 +23,12 @@ public class DonHangServiceImpl implements DonHangService {
     }
 
     @Override
-    public List<DonHang> layTatCaDonHang() {
+    public DonHang updateDonHang(DonHang donHang) {
+        return donHangRepository.update(donHang);
+    }
+
+    @Override
+    public List layTatCaDonHang() {
         return donHangRepository.findAll();
     }
 
@@ -31,6 +37,6 @@ public class DonHangServiceImpl implements DonHangService {
         DonHang donHang = donHangRepository.findById(id);
         donHang.setTrangThai("hoanthanh");
         donHang.setNgayNhan(new Date());
-        donHangRepository.save(donHang);
+        donHangRepository.update(donHang);
     }
 }

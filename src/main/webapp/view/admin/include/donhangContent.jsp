@@ -35,4 +35,4 @@
     </ul>
 </div>
 
-<script src="/js/admin/donhang.js"></script>
+<script src="/template/js/admin/donhang.js"></script>

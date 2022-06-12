@@ -20,6 +20,7 @@ profile_form.addEventListener("submit",function (e){
     if (matKhauMoi.value !== matKhauXacThuc.value){
         document.getElementById('warn-cf-pass').innerHTML = "Mật khẩu không khớp!";
     }else {
+        document.getElementById('warn-cf-pass').innerHTML = "";
         const url = "http://localhost:8080/api/taikhoan/update";
         fetch(url, {
             method: "POST",

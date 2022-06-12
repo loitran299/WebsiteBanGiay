@@ -58,7 +58,7 @@ function xuatHTML(sanPhams) {
                             <p class="card-text show_txt">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
                             <div class="row price-add-to-card">
                                 <div class="col price">
-                                    <p class="btn btn-danger btn-block">${sanPham.gia.toLocaleString('vi-VN', {
+                                    <p class="btn btn-block">${sanPham.gia.toLocaleString('vi-VN', {
                 style: 'currency',
                 currency: 'VND'
             })}</p>
@@ -134,7 +134,7 @@ function khiClickNhanHieu(id) {
         sanPhamMoi.innerHTML = `
                 <div class="card-body">
                     <img class="img-fluid" src="${sanPham.pathAnh}" />
-                    <h5 class="card-title"><a href="/chi-tiet-san-pham?id=${sanPham.id}" style="color: black">${sanPham.ten}</a></h5>
+                    <h6 class="card-title"><a href="/chi-tiet-san-pham?id=${sanPham.id}" style="color: black">${sanPham.ten}</a></h6>
                     <p class="card-text">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
                     <p class="bloc_left_price">${sanPham.gia.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}</p>
                 </div>

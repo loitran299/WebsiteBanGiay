@@ -71,7 +71,7 @@ public class NguoiDungServiceImpl implements NguoiDungService {
         oldNguoiDung.setEmail(user.getEmail());
         oldNguoiDung.setDiaChi(user.getDiaChi());
         oldNguoiDung.setHoTen(user.getHoTen());
-        nguoiDungRepository.save(oldNguoiDung);
+        nguoiDungRepository.update(oldNguoiDung);
     }
 
     @Override

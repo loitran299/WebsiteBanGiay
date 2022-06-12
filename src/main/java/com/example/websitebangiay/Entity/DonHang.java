@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.SQLUpdate;
 
 
 import javax.persistence.*;
@@ -55,7 +56,7 @@ public class DonHang implements java.io.Serializable {
     @JoinColumn(name = "id_nguoi_dung")
     private NguoiDung nguoiDung;
 
-    @Column(name = "tong_gia", nullable = false)
+    @Column(name = "tong_gia")
     private long tongGia;
 
 }

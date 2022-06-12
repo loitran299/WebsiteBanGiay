@@ -1,5 +1,5 @@
 const trangThaiEl = document.getElementById('trangThai');
-var trangThai = trangThaiEl.value;
+let trangThai = trangThaiEl.value;
 trangThaiEl.addEventListener('click',function (){
     trangThai = trangThaiEl.value;
     layDonHangs(xuatHTML)

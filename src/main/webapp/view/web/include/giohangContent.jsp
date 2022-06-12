@@ -83,7 +83,7 @@
                                 <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng thanh toán</strong>
                                     <h5 class="font-weight-bold" id="tongThanhToan">0 đ</h5>
                                 </li>
-                            </ul><a href="/xac-nhan-don-hang" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
+                            </ul><a href="${pageContext.request.contextPath}/xac-nhan-don-hang" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
                         </div>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ public class DonHangRepository {
         super.finalize();
     }
     public List findAll(){
-        return entityManager.createQuery("select sp from SanPham sp").getResultList();
+        return entityManager.createQuery("select dh from DonHang dh").getResultList();
     }
 
     public DonHang save(DonHang donHang){
@@ -31,6 +31,19 @@ public class DonHangRepository {
         }
         return donHang;
     }
+
+    public DonHang update(DonHang donHang){
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(donHang);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+        return donHang;
+    }
+
 
     public DonHang findById(Long id) {
         return entityManager.find(DonHang.class, id);
