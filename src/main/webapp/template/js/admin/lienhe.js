@@ -60,10 +60,11 @@ function traLoiLienHe(id) {
         const url = `http://localhost:8080/api/lienhe/traloi`;
         const data = {
             "id":id,
-            "traLoi":traLoi.value
+            "traLoi":traLoi.value,
+            "tieuDe":"Trả lời từ T-sneaker"
         }
         fetch(url,{
-            method:"POST",
+            method:"PUT",
             body:JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json; charset=UTF-8"
@@ -72,11 +73,11 @@ function traLoiLienHe(id) {
             .then(function (response) {
                 if (response.ok){
                     myModal.classList.add('d-none');
+                    layLienHes(xuatHTML);
                 }else{
                     alert("lỗi");
                 }
             })
-        layLienHes(xuatHTML);
     })
 
 }

@@ -23,7 +23,7 @@ public class LienHeServiceImpl implements LienHeService {
 
 
     @Override
-    public List<LienHe> tatCaLienHe() {
+    public List tatCaLienHe() {
         return lienHeRepository.findAll();
     }
 

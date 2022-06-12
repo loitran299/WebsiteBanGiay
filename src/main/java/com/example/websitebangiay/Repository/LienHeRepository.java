@@ -38,7 +38,7 @@ public class LienHeRepository {
         try {
             entityManager.getTransaction().begin();
             entityManager.createQuery("DELETE FROM LienHe lh WHERE lh.id = :id")
-                    .setParameter("id", id);
+                    .setParameter("id", id).executeUpdate();
             entityManager.getTransaction().commit();
         }catch (Exception e){
             entityManager.getTransaction().rollback();

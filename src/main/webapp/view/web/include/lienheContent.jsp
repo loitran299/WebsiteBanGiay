@@ -50,5 +50,5 @@
         </div>
     </div>
 </div>
-<script src="/js/web/lienhe.js"></script>
+<script src="/template/js/web/lienhe.js"></script>
 <script src="/template/js/web/sanpham.js"></script>

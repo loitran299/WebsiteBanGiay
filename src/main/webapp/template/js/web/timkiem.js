@@ -46,7 +46,7 @@ function xuatHTML(sanPhams) {
                             <p class="card-text show_txt">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
                             <div class="row price-add-to-card">
                                 <div class="col price">
-                                    <p class="btn btn-danger btn-block">${sanPham.gia.toLocaleString('vi-VN', {
+                                    <p class="btn btn-block">${sanPham.gia.toLocaleString('vi-VN', {
                 style: 'currency',
                 currency: 'VND'
             })}</p>

@@ -53,4 +53,4 @@
     </div>
 </div>
 
-<script src="/js/admin/lienhe.js"></script>
+<script src="/template/js/admin/lienhe.js"></script>
