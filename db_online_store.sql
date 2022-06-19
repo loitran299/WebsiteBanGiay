@@ -445,15 +445,13 @@ ALTER TABLE `chi_tiet_don_hang`
 -- Constraints for table `don_hang`
 --
 ALTER TABLE `don_hang`
-  ADD CONSTRAINT `FKc5tkognwtgw8fw3dnpylmoad0` FOREIGN KEY (`id_nguoi_dung`) REFERENCES `nguoi_dung` (`id`),
-  ADD CONSTRAINT `FKsh70s19t63rqhikx7u4sueay9` FOREIGN KEY (`id_nguoi_dung`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `FKc5tkognwtgw8fw3dnpylmoad0` FOREIGN KEY (`id_nguoi_dung`) REFERENCES `nguoi_dung` (`id`);
 
 --
 -- Constraints for table `gio_hang`
 --
 ALTER TABLE `gio_hang`
-  ADD CONSTRAINT `FK2u78fj8dii7flm08i96u70nbo` FOREIGN KEY (`id_nguoi_dung`) REFERENCES `nguoi_dung` (`id`),
-  ADD CONSTRAINT `FK5lt6k83m525dusstja1p5ud9j` FOREIGN KEY (`id_nguoi_dung`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `FK2u78fj8dii7flm08i96u70nbo` FOREIGN KEY (`id_nguoi_dung`) REFERENCES `nguoi_dung` (`id`);
 
 --
 -- Constraints for table `san_pham`
