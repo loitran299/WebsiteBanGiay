@@ -47,6 +47,7 @@ function xuatHTML(donHangs){
             if (trangThai === "chuahoanthanh"){
                 html += `<td><button class="btn btn-success" onclick="xacNhanHoanThanh(${donHang.id})">Hoàn thành</button></td>`;
             }
+            html += `<td><button class="btn btn-danger" onclick="xoaDonHang(${donHang.id})">Xóa</button></td>`;
             html += `</tr>`;
             return html;
         }
@@ -63,6 +64,21 @@ function xacNhanHoanThanh(id){
             if (re.ok){
                 alert("Đơn đã hoàn thành");
                 layDonHangs(xuatHTML);
+            }
+        })
+}
+
+function xoaDonHang(id){
+    const hoanThanhDonApi = "http://localhost:8080/api/donhang/delete/"+id;
+    fetch(hoanThanhDonApi,{
+        method:"DELETE"
+    })
+        .then(function (re) {
+            if (re.ok){
+                alert("Xóa thành công");
+                layDonHangs(xuatHTML);
+            }else {
+                alert("Đã xảy ra lỗi!");
             }
         })
 }
