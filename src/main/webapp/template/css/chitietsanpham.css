@@ -1,30 +1,149 @@
-body{
-    background-color: #edf1f5;
-    margin-top:20px;
+.daytren-2 {
+    margin-top: 2rem !important;
 }
-.card {
-    margin-bottom: 30px;
+.daytren-3 {
+    margin-top: 3rem !important;
 }
-.card {
+.font-chu-2 {
+    font-size: 2rem;
+    color: #b36800;
+}
+.cangiua {
+    text-align: center !important;
+}
+.mauxanh {
+    color: #28a745!important;
+}
+.chitiet-danhsachthongtin {
+    padding-left: 0;
+    list-style: none;
+}
+.chitiet-danhsachthongtin li i {
+    margin-right: 5px;
+}
+.chitiet-tong {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.chitiet-the {
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 0 solid transparent;
-    border-radius: 0;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
 }
-.card .card-subtitle {
+.chitiet-the-phanthan {
+    padding: 1.5rem;
+}
+.chitiet-the-tieude {
+    padding: 8px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+}
+.chitiet-the .card-subtitle {
     font-weight: 300;
     margin-bottom: 10px;
     color: #8898aa;
 }
-.table-product.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f3f8fa!important
+.chitiet-giamgia {
+    margin-left: 0.5rem;
+    color: #28a745;
+    font-size: 1.3rem;
 }
-.table-product td{
-    border-top: 0px solid #dee2e6 !important;
-    color: #728299!important;
+.hang {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 30px;
+}
+.hang > * {
+    padding: 0 10px;
+}
+.nut-den {
+    color: #fff;
+    background-color: #000;
+}
+.chitiet-bangthongtin {
+    width: 100%;
+}
+.bang-giaodien {
+    display: block;
+    width: 100%;
+}
+.bang {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+.bang-sanpham tbody tr {
+    width: 100%;
+}
+.bang-sanpham tbody tr:nth-of-type(odd) {
+    background-color: #f3f8fa!important;
+}
+.bang-sanpham td{
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: #000!important;
+    padding: 1rem;
+    font-weight: 400;
+}
+@media (min-width: 1200px) {
+    .chitiet-tong {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px) {
+    .chitiet-tong {
+        max-width: 960px;
+    }
+    .cot-thietbilon-5 {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .cot-thietbilon-7 {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .cot-thietbilon-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .chitiet-tong {
+        max-width: 720px;
+    }
+    .cot-thietbivua-5 {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+    .cot-thietbivua-7 {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .cot-thietbivua-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .cot-thietbinho-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .cot-thietbinho-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

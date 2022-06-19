@@ -1,60 +1,38 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="/template/css/style.css" rel="stylesheet" type="text/css"/>
-<div class="shopping-cart">
-    <div class="px-4 px-lg-0">
 
-        <div class="pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+<link href="/template/css/giohangContent.css" rel="stylesheet" type="text/css"/>
+<div class="gio-hang">
+    <div class="dem-phai-4 dem-trai-0">
+
+        <div class="dem-duoi-tren-5">
+            <div class="phan-than">
+                <div class="hang">
+                    <div class="cot-lap-12 dem-5 nen-trang ban-kinh-vien margin-xuong-5">
 
                         <!-- Shopping cart table -->
-                        <div class="table-responsive">
-                            <table class="table">
+                        <div class="bang-thich-ung">
+                            <table class="bang">
                                 <thead>
                                 <tr>
-                                    <th scope="col" class="border-0 bg-light">
-                                        <div class="p-2 px-3 text-uppercase">Sản Phẩm</div>
+                                    <th scope="col" class="nen-sang vien-0">
+                                        <div class="dem-2 dem-trai-3 chu-in-hoa">Sản Phẩm</div>
                                     </th>
-                                    <th scope="col" class="border-0 bg-light">
+                                    <th scope="col" class="nen-sang vien-0">
                                     </th>
-                                    <th scope="col" class="border-0 bg-light">
-                                        <div class="py-2 text-uppercase">Đơn Giá</div>
+                                    <th scope="col" class="nen-sang vien-0">
+                                        <div class="dem-duoi-tren-2 chu-in-hoa">Đơn Giá</div>
                                     </th>
-                                    <th scope="col" class="border-0 bg-light">
-                                        <div class="py-2 text-uppercase">Số Lượng</div>
+                                    <th scope="col" class="nen-sang vien-0">
+                                        <div class="dem-duoi-tren-2 chu-in-hoa">Số Lượng</div>
                                     </th>
-                                    <th scope="col" class="border-0 bg-light">
-                                        <div class="py-2 text-uppercase">Xóa</div>
+                                    <th scope="col" class="nen-sang vien-0">
+                                        <div class="dem-duoi-tren-2 chu-in-hoa">Xóa</div>
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
-<%--                                <c:forEach items="${chiMucs}" var="chiMuc">--%>
-<%--                                    <tr>--%>
-<%--                                        <th scope="row">--%>
-<%--                                            <div class="p-2">--%>
-<%--                                                <img src="${chiMuc.sanPham.pathAnh}" alt="" width="70" class="img-fluid rounded shadow-sm">--%>
-<%--                                                <div class="ml-3 d-inline-block align-middle">--%>
-<%--                                                    <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">${chiMuc.sanPham.ten}</a></h5><span class="text-muted font-weight-normal font-italic"></span>--%>
-<%--                                                </div>--%>
-<%--                                            </div>--%>
-<%--                                        </th>--%>
-<%--                                        <td class="align-middle"><strong>${chiMuc.sanPham.gia * chiMuc.soLuong}</strong></td>--%>
-<%--                                        <td class="align-middle">--%>
-<%--                                            <a href="#"><button class="btnSub">-</button></a>--%>
-<%--                                            <strong>${chiMuc.soLuong}</strong>--%>
-<%--                                            <a href="#"><button class="btnAdd">+</button></a>--%>
-<%--                                        </td>--%>
-<%--                                        <td class="align-middle"><a href="#" class="text-dark">--%>
-<%--                                            <button type="button" class="btn btn-danger">Xóa</button>--%>
-<%--                                        </a>--%>
-<%--                                        </td>--%>
-<%--                                    </tr>--%>
-<%--                                </c:forEach>--%>
                                 </tbody>
                             </table>
                         </div>
@@ -62,28 +40,28 @@
                     </div>
                 </div>
 
-                <div class="row py-5 p-4 bg-white rounded shadow-sm">
-                    <div class="col-lg-6">
-                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Voucher</div>
-                        <div class="p-4">
-                            <div class="input-group mb-4 border rounded-pill p-2">
-                                <input type="text" placeholder="Nhập Voucher" aria-describedby="button-addon3" class="form-control border-0">
-                                <div class="input-group-append border-0">
-                                    <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Sử dụng</button>
+                <div class="hang dem-duoi-tren-5 dem-4 nen-trang ban-kinh-vien">
+                    <div class="cot-lap-6">
+                        <div class="nen-sang ban-kinh-vien dem-trai-phai-4 dem-tren-duoi-3 chu-in-hoa do-dam-phong-chu">Voucher</div>
+                        <div class="dem-4">
+                            <div class="nhom-the-input le-duoi-4 vien ban-kinh-vien dem-2">
+                                <input type="text" placeholder="Nhập Voucher" aria-describedby="button-addon3" class="kiem-soat-form vien-0">
+                                <div class="nhom-the-input-le-trai vien-0">
+                                    <button id="button-addon3" type="button" class="nut-bam nut-bam-den dem-trai-phai-4 ban-kinh-vien"><i class="fa fa-gift mr-2"></i>Sử dụng</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Thành tiền</div>
-                        <div class="p-4">
-                            <ul class="list-unstyled mb-4">
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Phí vận chuyển</strong><strong>Free ship</strong></li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">VAT</strong><strong>10 $</strong></li>
-                                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng thanh toán</strong>
-                                    <h5 class="font-weight-bold" id="tongThanhToan">0 đ</h5>
+                    <div class="cot-lap-6">
+                        <div class="nen-sang ban-kinh-vien dem-trai-phai-4 dem-tren-duoi-3 chu-in-hoa do-dam-phong-chu">Thành tiền</div>
+                        <div class="dem-4">
+                            <ul class="bo-gach-chan le-duoi-4">
+                                <li class="hien-thi-kieu-flex can-giua dem-tren-duoi-3 vien-duoi"><strong class="text-muted">Phí vận chuyển</strong><strong>Free ship</strong></li>
+                                <li class="hien-thi-kieu-flex can-giua dem-tren-duoi-3 vien-duoi"><strong class="text-muted">VAT</strong><strong>10 $</strong></li>
+                                <li class="hien-thi-kieu-flex can-giua dem-tren-duoi-3 vien-duoi"><strong class="text-muted">Tổng thanh toán</strong>
+                                    <h5 class="do-dam-phong-chu" id="tongThanhToan">0 đ</h5>
                                 </li>
-                            </ul><a href="${pageContext.request.contextPath}/xac-nhan-don-hang" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
+                            </ul><a href="/xac-nhan-don-hang" class="nut-bam nut-bam-den vien dem-duoi-tren-2 nut-bam-dang-hop">Mua hàng</a>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,34 @@
+@media (min-width: 992px) {
+    .danhmuc-thietbilon-8 {
+        width: 66.67%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding: 0 15px;
+    }
+    .danhmuc-thietbilon-4 {
+        width: 33.33%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding: 0 15px;
+    }
+    .danhmuc-thietbilon-1 {
+        width: 8.33%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding: 0 15px;
+    }
+}
+.dai-toida {
+    width: 100% !important;
+}
+.danhmuc-phandau {
+    padding-bottom: 10px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
+}
 body {
     padding-top: 80px;
 }
@@ -54,4 +85,61 @@ canvas{
 
     width:900px !important;
     height:450px !important;
+}
+
+.danhmuc-form {
+    width: 30%;
+    display: block;
+    height: 35px;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.danhmuc-form-tong {
+    margin-bottom: 15px;
+}
+.danhmuc-bang {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+.danhmuc-bang thead tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.danhmuc-bang thead tr th {
+    padding: 10px;
+}
+.danhmuc-bang tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.danhmuc-bang tbody tr td {
+    padding: 10px;
+}
+.danhmuc-nut {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.danhmuc-nut:hover {
+    opacity: 0.7;
+}
+.danhmuc-nut-chinh {
+    color: #fff;
+    background-color: #337ab7;
 }

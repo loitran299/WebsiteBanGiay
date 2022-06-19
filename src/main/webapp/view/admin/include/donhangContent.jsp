@@ -3,18 +3,18 @@
 
 
 <script src="https://kit.fontawesome.com/75eef02814.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/template/css/quantri.css">
+<div class="danhmuc-thietbilon-8">
+    <h3 class="danhmuc-phandau">Quản lý Danh mục</h3>
 
-<div class="col-md-9 bounce">
-    <h3 class="page-header">Quản lý Danh mục</h3>
-
-    <select class="form-control" style="width: 30%;" id="trangThai">
+    <select class="danhmuc-form" id="trangThai">
         <option value="chuahoanthanh">Chưa hoàn thành</option>
         <option value="hoanthanh">Hoàn thành</option>
     </select>
 
     <hr/>
 
-    <table class="table table-hover " style="text-align: center;">
+    <table class="danhmuc-bang">
         <thead>
         <tr>
             <th>Mã</th>
@@ -31,7 +31,7 @@
 
     </table>
 
-    <ul class="pagination">
+    <ul class="danhmuc-phantrang">
     </ul>
 </div>
 

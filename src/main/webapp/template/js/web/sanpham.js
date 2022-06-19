@@ -50,21 +50,21 @@ function xuatHTML(sanPhams) {
     const htmls = sanPhams.map((sanPham , index) => {
         if(index >= batDau && index <ketThuc) {
             return `
-                <div class="col-12 col-md-6 col-lg-4 product">
-                    <div class="card">
-                        <img class="card-img-top" src="${sanPham.pathAnh}" alt="Card image cap">
-                        <div class="card-body">
-                            <h6 class="card-title show_txt"><a href="/chi-tiet-san-pham?id=${sanPham.id}" title="View Product">${sanPham.ten}</a></h6>
-                            <p class="card-text show_txt">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
-                            <div class="row price-add-to-card">
-                                <div class="col price">
-                                    <p class="btn btn-block">${sanPham.gia.toLocaleString('vi-VN', {
+                <div class="sanpham-thietbilon-4 sanpham-thietbivua-6 sanpham">
+                    <div class="sanpham-the">
+                        <img class="sanpham-the-anh" src="${sanPham.pathAnh}">
+                        <div class="sanpham-the-phanthan">
+                            <h4 class="sanpham-the-tieude sanpham-the-rutgon"><a href="/chi-tiet-san-pham?id=${sanPham.id}" title="View Product">${sanPham.ten}</a></h4>
+                            <p class="sanpham-the-loaigiay sanpham-the-rutgon">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
+                            <div class="sanpham-hang sanpham-themvaogiohang">
+                                <div class="sanpham-cot sanpham-the-gia fontchu-1">
+                                    <p>${sanPham.gia.toLocaleString('vi-VN', {
                 style: 'currency',
                 currency: 'VND'
             })}</p>
                                 </div>
-                                <div class="col add-to-card" style=" text-align: center">
-                                    <button class="btn btn-success" onclick="themSanPham(${sanPham.id})">Thêm vào giỏ</button>
+                                <div class="sanpham-cot">
+                                    <button class="nut-themvaogiohang" onclick="themSanPham(${sanPham.id})">Thêm vào giỏ</button>
                                 </div>
                             </div>
                         </div>
@@ -132,25 +132,24 @@ function khiClickNhanHieu(id) {
     const sanPhamMoi = document.getElementById('sanPhamMoi');
     if (sanPhamMoi != null){
         sanPhamMoi.innerHTML = `
-                <div class="card-body">
-                    <img class="img-fluid" src="${sanPham.pathAnh}" />
-                    <h6 class="card-title"><a href="/chi-tiet-san-pham?id=${sanPham.id}" style="color: black">${sanPham.ten}</a></h6>
-                    <p class="card-text">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
-                    <p class="bloc_left_price">${sanPham.gia.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}</p>
+                <div class="sanpham-the-phanthan">
+                    <img class="anh-giaypine" src="${sanPham.pathAnh}" />
+                    <h5 class="sanpham-the-tieude"><a href="/chi-tiet-san-pham?id=${sanPham.id}">${sanPham.ten}</a></h5>
+                    <p class="sanpham-the-loaigiay">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
+                    <p class="sanpham-the-gia">${sanPham.gia.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}</p>
                 </div>
-    `;
+        `;
     }
  }
 
 function xuatDanhSachTrang() {
     let html = '';
-    html += `<li class="page-item" onclick="onClickTrangTruoc()"><a class="page-link">Trước</a></li>`;
-    html += `<li class="page-item active"><a class="page-link">1</a></li>`;
+    html += `<li class="page-item" onclick="onClickTrangTruoc()"><a class="sanpham-phantrang-duongdan">Trước</a></li>`;
+    html += `<li class="page-item active"><a class="sanpham-phantrang-duongdan">1</a></li>`;
     for (let i = 2; i<= soTrang; i++){
-        console.log("i:" + i);
-        html += `<li class="page-item"><a class="page-link">${i}</a></li>`;
+        html += `<li class="page-item"><a class="sanpham-phantrang-duongdan">${i}</a></li>`;
     }
-    html += `<li class="page-item" onclick="onClickTrangSau()"><a class="page-link">Sau</a></li>`;
+    html += `<li class="page-item" onclick="onClickTrangSau()"><a class="sanpham-phantrang-duongdan">Sau</a></li>`;
     if(document.getElementById("so-trang") != null){
         document.getElementById("so-trang").innerHTML = html;
     }

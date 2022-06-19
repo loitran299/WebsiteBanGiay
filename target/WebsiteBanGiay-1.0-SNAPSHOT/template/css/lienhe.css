@@ -1,3 +1,209 @@
+/*HMT*/
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+}
+
+.thungchua {
+    max-width: 960px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hang {
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.cot {
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.cot-nho-4 {
+    -webkit-box-flex: 0;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.cot-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.the {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.the-tieude:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.the-tieude {
+    background-color: rgb(28,36,47) !important;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.vanban-trang {
+    color: #fff!important;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.the-than {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.mau-nhom {
+    margin-bottom: 1rem;
+}
+
+.mau-kiemsoat {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-weight: 400;
+    appearance: none;
+}
+
+input {
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    outline: none;
+}
+
+.vanban-dabitat {
+    color: #6c757d!important;
+}
+
+.mau-vanban {
+    display: block;
+    margin-top: 0.25rem;
+}
+
+small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+.ml-auto {
+    margin-left: auto!important;
+}
+
+.mr-auto {
+    margin-right: auto!important;
+}
+
+.nut:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.vanban-phai {
+    text-align: right!important;
+}
+
+.nut-chinh {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.nut {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button {
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    outline: none;
+}
+
+.mb-3 {
+    margin-bottom: 1rem!important;
+}
+
+.nen-sang {
+    background-color: #f8f9fa!important;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+/* END HMT */
+
 .modal1 {
     position: fixed;
     top: 0;

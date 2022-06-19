@@ -38,27 +38,28 @@ function xuatHTML(sanPhams) {
     const htmls = sanPhams.map((sanPham , index) => {
         if(index >= batDau && index <ketThuc) {
             return `
-                <div class="col-12 col-md-6 col-lg-4 product">
-                    <div class="card">
-                        <img class="card-img-top" src="${sanPham.pathAnh}" alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title show_txt"><a href="/chi-tiet-san-pham?id=${sanPham.id}" title="View Product">${sanPham.ten}</a></h4>
-                            <p class="card-text show_txt">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
-                            <div class="row price-add-to-card">
-                                <div class="col price">
-                                    <p class="btn btn-block">${sanPham.gia.toLocaleString('vi-VN', {
+                <div class="sanpham-thietbilon-4 sanpham-thietbivua-6 sanpham">
+                    <div class="sanpham-the">
+                        <img class="sanpham-the-anh" src="${sanPham.pathAnh}">
+                        <div class="sanpham-the-phanthan">
+                            <h4 class="sanpham-the-tieude sanpham-the-rutgon"><a href="/chi-tiet-san-pham?id=${sanPham.id}" title="View Product">${sanPham.ten}</a></h4>
+                            <p class="sanpham-the-loaigiay sanpham-the-rutgon">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
+                            <div class="sanpham-hang sanpham-themvaogiohang">
+                                <div class="sanpham-cot sanpham-the-gia fontchu-1">
+                                    <p>${sanPham.gia.toLocaleString('vi-VN', {
                 style: 'currency',
                 currency: 'VND'
             })}</p>
                                 </div>
-                                <div class="col add-to-card" style=" text-align: center">
-                                    <button class="btn btn-success" onclick="themSanPham(${sanPham.id})">Thêm vào giỏ</button>
+                                <div class="sanpham-cot">
+                                    <button class="nut-themvaogiohang" onclick="themSanPham(${sanPham.id})">Thêm vào giỏ</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
         `;
+        //cap nhat
         }
     })
     if(sanPhamView !== null){

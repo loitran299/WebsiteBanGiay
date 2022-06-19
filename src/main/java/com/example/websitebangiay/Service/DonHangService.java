@@ -10,4 +10,5 @@ public interface DonHangService {
     DonHang updateDonHang(DonHang donHang);
     List<DonHang> layTatCaDonHang();
     void hoanThanhDonHang(Long id);
+    void xoaDonHang(Long id);
 }

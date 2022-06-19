@@ -8,13 +8,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trang quản trị</title>
+    <link rel="stylesheet" href="/template/css/trangquantriAdmin.css">
 </head>
 <body>
     <%@include file="include/header.jsp"%>
-    <%@include file="include/sidebar.jsp"%>
+    <%@include file="include/thanhtruot.jsp"%>
     <%@include file="include/content.jsp"%>
     <%@include file="include/footer.jsp"%>
-
-
 </body>
 </html>

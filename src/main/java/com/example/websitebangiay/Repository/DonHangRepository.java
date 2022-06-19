@@ -44,6 +44,16 @@ public class DonHangRepository {
         return donHang;
     }
 
+    public void deleteById(Long id){
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM DonHang dh WHERE dh.id = :id").setParameter("id", id).executeUpdate();
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+    }
 
     public DonHang findById(Long id) {
         return entityManager.find(DonHang.class, id);

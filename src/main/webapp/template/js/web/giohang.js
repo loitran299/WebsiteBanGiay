@@ -24,27 +24,27 @@ function xuatGioHang(chiMucs) {
         console.log("id: "+chiMuc.id);
         return `
              <tr>
-                 <td class="align-middle">
-                         <img src="${chiMuc.sanPham.pathAnh}" alt="" style="width: 70px;" class="img-fluid rounded shadow-sm">
+                 <td class="can-giua">
+                         <img src="${chiMuc.sanPham.pathAnh}" alt="" style="width: 70px;" class="kieu-anh do-cong-vien">
                  </td>
-                 <td class="align-middle"> 
-                     <div class="d-inline-block align-middle">
-                         <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">${chiMuc.sanPham.ten}</a></h5>
-                         <span class="text-muted font-weight-normal font-italic">${chiMuc.sanPham.danhMuc.ten}/</span>
-                         <span class="text-muted font-weight-normal font-italic">${chiMuc.sanPham.nhanHieu.ten}</span>
+                 <td class="can-giua"> 
+                     <div class="hien-thi-thanh-1-hang can-giua">
+                         <h5 class="le-duoi-0"><a href="/chi-tiet-san-pham?id=${chiMuc.sanPham.id}" class="chu-den hien-thi-thanh-1-hang">${chiMuc.sanPham.ten}</a></h5>
+                         <span class="chu-nghieng-in-duoi do-dam-phong-chu phong-chu-italic">${chiMuc.sanPham.danhMuc.ten}/</span>
+                         <span class="chu-nghieng-in-duoi do-dam-phong-chu phong-chu-italic">${chiMuc.sanPham.nhanHieu.ten}</span>
                      </div>
                  </td>
-                 <td class="align-middle"><strong>${gia.toLocaleString('vi-VN', {
+                 <td class="can-giua"><strong>${gia.toLocaleString('vi-VN', {
             style: 'currency',
             currency: 'VND'
         })}</strong></td>
-                 <td class="align-middle">
-                     <button class="btn btnSub" onclick="thayDoiSoLuong(${chiMuc.id},${chiMuc.soLuong -1})">-</button>
+                 <td class="can-giua">
+                     <button class="nut-bam btnSub" onclick="thayDoiSoLuong(${chiMuc.id},${chiMuc.soLuong -1})">-</button>
                      <strong>${chiMuc.soLuong}</strong>
-                     <button class="btn btnAdd" onclick="thayDoiSoLuong(${chiMuc.id},${chiMuc.soLuong +1})">+</button>
+                     <button class="nut-bam btnAdd" onclick="thayDoiSoLuong(${chiMuc.id},${chiMuc.soLuong +1})">+</button>
                  </td>
-                 <td class="align-middle"><a href="#" class="text-dark">
-                         <button type="button" class="btn btn-danger" onclick="xoaChiMuc(${chiMuc.id})">Xóa</button>
+                 <td class="can-giua"><a href="#" class="chu-den">
+                         <button type="button" class="nut-bam btn-danger" onclick="xoaChiMuc(${chiMuc.id})">Xóa</button>
                      </a>
                  </td>
                  
@@ -53,7 +53,7 @@ function xuatGioHang(chiMucs) {
     })
     tbody.innerHTML = htmls.join('');
     document.getElementById("soChiMucCuaGioHang").innerHTML = chiMucs.length;
-    document.getElementById("tongThanhToan").innerHTML = `<h5 class="font-weight-bold" id="tongThanhToan">${tongThanhToan.toLocaleString('vi-VN', {
+    document.getElementById("tongThanhToan").innerHTML = `<h5 class="do-dam-phong-chu" id="tongThanhToan">${tongThanhToan.toLocaleString('vi-VN', {
         style: 'currency',
         currency: 'VND'
     })}</h5>`;

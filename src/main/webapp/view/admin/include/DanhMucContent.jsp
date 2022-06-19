@@ -3,24 +3,20 @@
 
 
 <script src="https://kit.fontawesome.com/75eef02814.js" crossorigin="anonymous"></script>
-
-<div class="col-md-9 bounce">
-    <h3 class="page-header">Quản lý Danh mục</h3>
+<link rel="stylesheet" href="/template/css/quantri.css">
+<div class="danhmuc-thietbilon-8">
+    <h3 class="danhmuc-phandau">Quản lý Danh mục</h3>
 
     <form id="form_them_danh_muc" method="post">
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <input type="text" class="form-control" id="danhMuc" placeholder="Danh mục" name="danhMuc">
-            </div>
+        <div class="danhmuc-form-tong danhmuc-thietbilon-4">
+            <input type="text" class="danhmuc-form dai-toida" id="danhMuc" placeholder="Danh mục" name="danhMuc">
         </div>
-        <div class="form-group col-md-1">
-            <button type="submit" class="btn btn-primary">Thêm Danh Mục</button>
+        <div class="danhmuc-form-tong danhmuc-thietbilon-1">
+            <button type="submit" class="danhmuc-nut danhmuc-nut-chinh">Thêm Danh Mục</button>
         </div>
     </form>
 
-    <hr/>
-
-    <table class="table table-hover " style="text-align: center;">
+    <table class="danhmuc-bang">
         <thead>
         <tr>
             <th>Mã</th>
@@ -33,7 +29,7 @@
 
     </table>
 
-    <ul class="pagination">
+    <ul class="danhmuc-phantrang">
     </ul>
 </div>
 

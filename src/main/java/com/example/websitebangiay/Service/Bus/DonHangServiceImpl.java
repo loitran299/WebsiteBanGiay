@@ -2,7 +2,9 @@ package com.example.websitebangiay.Service.Bus;
 
 
 import com.example.websitebangiay.Entity.DonHang;
+import com.example.websitebangiay.Repository.ChiTietDonHangRepository;
 import com.example.websitebangiay.Repository.DonHangRepository;
+import com.example.websitebangiay.Service.ChiTietDonHangService;
 import com.example.websitebangiay.Service.DonHangService;
 
 import javax.annotation.ManagedBean;
@@ -16,6 +18,9 @@ public class DonHangServiceImpl implements DonHangService {
 
     @Inject
     private DonHangRepository donHangRepository;
+
+    @Inject
+    private ChiTietDonHangRepository chiTietDonHang;
 
     @Override
     public DonHang luuDonHang(DonHang donHang) {
@@ -38,5 +43,11 @@ public class DonHangServiceImpl implements DonHangService {
         donHang.setTrangThai("hoanthanh");
         donHang.setNgayNhan(new Date());
         donHangRepository.update(donHang);
+    }
+
+    @Override
+    public void xoaDonHang(Long id) {
+        chiTietDonHang.deleteByIdDonHang(id);
+        donHangRepository.deleteById(id);
     }
 }

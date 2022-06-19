@@ -2,12 +2,11 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
-<link rel="stylesheet" href="/template/css/lienhe.css">
 <script src="https://kit.fontawesome.com/75eef02814.js" crossorigin="anonymous"></script>
-
-<div class="col-md-9 bounce">
-    <h3 class="page-header">Quản lý Danh mục</h3>
-    <table class="table table-hover " style="text-align: center;">
+<link rel="stylesheet" href="/template/css/lienhe-admin.css">
+<div class="cot-lap-9 hien-len">
+    <h3 class="dau-trang">Quản lý Danh mục</h3>
+    <table class="bang">
         <thead>
         <tr>
             <th>Mã</th>
@@ -22,29 +21,29 @@
 
     </table>
 
-    <ul class="pagination">
+    <ul class="phan-trang">
     </ul>
 </div>
 
-<div class="modal1" id="myModal">
-    <div class="modal__overlay"></div>
+<div class="phuong-thuc-1 hien-thi-kieu-none" id="myModal">
+    <div class="phuong-thuc-lop-phu"></div>
 
-    <div class="modal__body">
-        <div class="modal__inner">
+    <div class="phuong-thuc-than">
+        <div class="phuong-thuc-ben-trong">
 
-            <div class="card">
-                <div class="card-header bg-primary text-white row_head">
+            <div class="the">
+                <div class="the-dau nen hang-dau">
                     <i class="fa fa-envelope"></i>Trả lời liên hệ.
-                    <div class="btn" id="close">x</div>
+                    <div class="nut-bam" id="dong">x</div>
                 </div>
-                <div class="card-body" style="width: 500px">
+                <div class="than-the" style="width: 500px">
                     <form id="formLienHe" >
-                        <div class="form-group">
+                        <div class="phong-nhom">
                             <label for="traLoi">Trả lời</label>
-                            <textarea class="form-control" id="traLoi" rows="5" required style="font-size: 25px"></textarea>
+                            <textarea class="phong-kiem-soat" id="traLoi" rows="5" required style="font-size: 25px"></textarea>
                         </div>
-                        <div class="mx-auto bg-success">
-                            <button type="submit" class="btn btn-primary text-left" style="float: right;">Gửi</button></div>
+                        <div class="le-trai-phai-tu-can">
+                            <button type="submit" class="nut-bam nut-bam-so-cap" style="float: right;">Gửi</button></div>
                     </form>
                 </div>
             </div>

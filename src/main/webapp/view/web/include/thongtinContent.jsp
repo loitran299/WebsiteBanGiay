@@ -1,87 +1,59 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<link rel="stylesheet" href="/css/profile.css">
+<%--<link rel="stylesheet" href="/css/profile.css">--%>
+<link rel="stylesheet" href="/template/css/thongtin.css">
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 col-xl-8 mx-auto">
-            <h2 class="h3 mb-4 page-title">Cài đặt</h2>
-            <div class="my-4">
-                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Thông tin người dùng</a>
+<div class="thungchua">
+    <div class="hang bienminh-noidung-trungtam">
+        <div class="cot-12 cot-l-10 cot-xl-8 mb-auto">
+            <h2 class="h3 mb-4 tieude">Cài đặt</h2>
+            <div class="b-4">
+                <ul class="dieuhuong dieuhuong-cactab mb-4" id="tabCuaToi" role="tablist">
+                    <li class="dieuhuong-muc">
+                        <a class="dieuhuong-lienket hoatdong" id="tabTrangChu" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Thông tin người dùng</a>
                     </li>
                 </ul>
-                <form id="profile-form" method="post">
-                    <div class="row mt-5 align-items-center">
-                        <div class="col-md-3 text-center mb-5">
-                            <div class="avatar avatar-xl">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="..." class="avatar-img rounded-circle" />
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="row align-items-center">
-                                <div class="col-md-7">
-                                    <h4 class="mb-1">Brown, Asher</h4>
-                                    <p class="small mb-3"><span class="badge badge-dark">New York, USA</span></p>
-                                </div>
-                            </div>
-                            <div class="row mb-4">
-                                <div class="col-md-7">
-                                    <p class="text-muted">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus. In hac habitasse platea dictumst. Cras urna quam, malesuada vitae risus at,
-                                        pretium blandit sapien.
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <p class="small mb-0 text-muted">Nec Urna Suscipit Ltd</p>
-                                    <p class="small mb-0 text-muted">P.O. Box 464, 5975 Eget Avenue</p>
-                                    <p class="small mb-0 text-muted">(537) 315-1481</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="my-4" />
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
+                <form id="hoso-mau" method="post">
+                    <div class="mau-hang">
+                        <div class="mau-nhom cot-trungbinh-6">
                             <label for="tenDangNhap">Tên đăng nhập</label>
-                            <input type="text" id="tenDangNhap" class="form-control" value="${NGUOIDUNG.tenDangNhap}" readonly/>
+                            <input type="text" id="tenDangNhap" class="mau-kiemsoat" value="${NGUOIDUNG.tenDangNhap}" readonly/>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="mau-nhom cot-trungbinh-6">
                             <label for="hoTen">Họ và tên</label>
-                            <input type="text" id="hoTen" class="form-control" value="${NGUOIDUNG.hoTen}" />
+                            <input type="text" id="hoTen" class="mau-kiemsoat" value="${NGUOIDUNG.hoTen}" />
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="mau-nhom">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" value="${NGUOIDUNG.email}" />
+                        <input type="email" class="mau-kiemsoat" id="email" value="${NGUOIDUNG.email}" />
                     </div>
-                    <div class="form-group">
+                    <div class="mau-nhom">
                         <label for="diaChi">Địa chỉ</label>
-                        <input type="text" class="form-control" id="diaChi" value="${NGUOIDUNG.diaChi}" />
+                        <input type="text" class="mau-kiemsoat" id="diaChi" value="${NGUOIDUNG.diaChi}" />
                     </div>
-                    <hr class="my-4" />
-                    <div class="row mb-4">
-                        <div class="col-md-6">
-                            <div class="form-group">
+                    <hr class="mb-4" />
+                    <div class="hang mb-4">
+                        <div class="cot-trungbinh-6">
+                            <div class="mau-nhom">
                                 <label for="matKhauMoi">Mật khẩu mới</label>
-                                <input type="password" class="form-control" id="matKhauMoi" />
+                                <input type="password" class="mau-kiemsoat" id="matKhauMoi" />
                             </div>
-                            <div class="form-group">
+                            <div class="mau-nhom">
                                 <label for="matKhauXacNhan">Nhập lại mật khẩu</label>
-                                <input type="password" class="form-control" id="matKhauXacNhan" />
+                                <input type="password" class="mau-kiemsoat" id="matKhauXacNhan" />
                                 <label for="matKhauXacNhan" id="warn-cf-pass" style="color: #A11515FF"></label>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="cot-trungbinh-6 pl-4">
                             <p class="mb-2">Yêu cầu mật khẩu</p>
-                            <p class="small text-muted mb-2">To create a new password, you have to meet all of the following requirements:</p>
-                            <ul class="small text-muted pl-4 mb-0">
-                                <li>Ít nhất 3 ký tự</li>
-                                <li>Không được giống với mật khẩu cũ</li>
+                            <p class="nho vanban-dabitat mb-2">Để tạo một tài khoản, bạn cần đáp ứng tất cả các yêu cầu dưới đây:</p>
+                            <ul class="nho vanban-dabitat pl-4 mb-0">
+                                <li>1. Ít nhất 3 ký tự</li>
+                                <li>2. Không được giống với mật khẩu cũ</li>
                             </ul>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">lưu thay đổi</button>
+                    <button type="submit" class="nut nut-chinh">Lưu thay đổi</button>
                 </form>
             </div>
         </div>

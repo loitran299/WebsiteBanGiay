@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.nay {
+    animation-name: bounce;
+    transform-origin: center bottom;
+}
+
+.trang-tieude {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.mau-nhom {
+    margin-bottom: 15px;
+}
+
+.cot-trungbinh-9 {
+    width: 75%;
+}
+
+.cot-trungbinh-5 {
+    width: 41.66666667%;
+}
+
+.cot-trungbinh-4 {
+    width: 33.33333333%;
+}
+
+.cot-trungbinh-3 {
+    width: 25%;
+}
+
+.cot-trungbinh-2 {
+    width: 16.66666667%;
+}
+
+.cot-trungbinh-1 {
+    width: 8.33333333%;
+}
+
+.cot-trungbinh-1,
+.cot-trungbinh-2,
+.cot-trungbinh-3,
+.cot-trungbinh-4,
+.cot-trungbinh-5,
+.cot-trungbinh-9 {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.mau-kiemsoat {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+.nut-chinh {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.nut {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.bang {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+    text-indent: initial;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    border-color: grey;
+    font-variant: normal;
+}

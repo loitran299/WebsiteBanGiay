@@ -2,9 +2,9 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
-
-<div class="col-md-9 bounce">
-    <h3 class="page-header">Danh sách công việc</h3>
+<link rel="stylesheet" href="/template/css/quantri.css">
+<div class="danhmuc-thietbilon-8">
+    <h3 class="danhmuc-phandau">Danh sách công việc</h3>
     <c:if test = "${listCongViec.soDonHangMoi > 0}">
     <p>Bạn có: <a href='<c:url value="/admin/don-hang" />'> ${listCongViec.soDonHangMoi} đơn hàng mới</a><p>
     </c:if>

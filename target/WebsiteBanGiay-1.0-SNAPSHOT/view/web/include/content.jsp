@@ -1,9 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-
-
-<section class="jumbotron text-center">
-    <div class="container">
+<link rel="stylesheet" href="/template/css/slide.css">
+<link rel="stylesheet" href="/template/css/reset.css">
+<link rel="stylesheet" href="/template/css/sanpham.css">
+<section class="slide cangiua">
+    <div class="sanpham-tong">
         <!-- Slider -->
         <div class="image-slider">
             <div class="image-item">
@@ -55,81 +56,44 @@
     </div>
 </section>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/trang-chu">Trang Chủ</a></li>
-                    <li class="breadcrumb-item"><a href="#">Nhãn hiệu</a></li>
-                    <li class="breadcrumb-item active" aria-current="#">Sub-Brand</li>
+<div class="sanpham-tong">
+    <div class="sanpham-hang">
+        <div class="sanpham-cot chieudaitoida">
+            <nav class="sanpham-vitri">
+                <ol class="vitri">
+                    <li class="vitri-con"><a class="chuden" style="text-decoration: none" href="/trang-chu">Trang Chủ</a></li>
                 </ol>
             </nav>
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="card bg-light mb-3">
-                <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i>Thương hiệu</div>
-                <ul class="list-group category_block" id="listNhanHieu">
+<div class="sanpham-tong">
+    <div class="sanpham-hang">
+        <div class="sanpham-thietbivua-0 sanpham-thietbilon-3">
+            <div class="sanpham-the nentrang dayxuong-1">
+                <div class="sanpham-the-phandau chutrang chuhoa"><i class="fa fa-list"></i>Thương hiệu</div>
+                <ul class="sanpham-danhsach-nhanhieu" id="listNhanHieu">
                     <c:forEach items="${cacNhanHieu}" var="nhanHieu">
-                    <li class="list-group-item text-black font-weight-bold" onclick="khiClickNhanHieu(${nhanHieu.id})">${nhanHieu.ten}</li>
+                    <li class="sanpham-danhsach-nhanhieu-con chuden chudam-700" onclick="khiClickNhanHieu(${nhanHieu.id})">${nhanHieu.ten}</li>
                     </c:forEach>
-
                 </ul>
             </div>
-            <div class="card bg-light mb-3">
-                <div class="card-header text-white text-uppercase">Sản phẩm mới nhất</div>
-                <div class="card-body" id="sanPhamMoi">
-                    <img class="img-fluid" src="/img/pic1.jpg" />
-                    <h5 class="card-title">Jordan</h5>
-                    <p class="card-text">Sneaker</p>
-                    <p class="bloc_left_price">100$</p>
-                </div>
+            <div class="sanpham-the nentrang dayxuong-1">
+                <div class="sanpham-the-phandau chutrang chuhoa">Sản phẩm mới nhất</div>
+                <div class="sanpham-the-phanthan" id="sanPhamMoi"></div>
             </div>
         </div>
 
-        <div class="col-sm-9">
-            <div class="row sub-category" id="listSanPham">
-<%--                <c:forEach items="${cacSanPham}" var="sanPham">--%>
-<%--                <div class="col-12 col-md-6 col-lg-4 product">--%>
-<%--                    <div class="card">--%>
-<%--                        <img class="card-img-top" src="${sanPham.pathAnh}" alt="Card image cap">--%>
-<%--                        <div class="card-body">--%>
-<%--                            <h4 class="card-title show_txt"><a href="#" title="View Product">${sanPham.ten}</a></h4>--%>
-<%--                            <p class="card-text show_txt">${sanPham.nhanHieu.ten}</p>--%>
-<%--                            <div class="row price-add-to-card">--%>
-<%--                                <div class="col price">--%>
-<%--                                    <p class="btn btn-danger btn-block">${sanPham.gia} VND</p>--%>
-<%--                                </div>--%>
-<%--                                <div class="col add-to-card">--%>
-<%--                                    <a href="#" class="btn btn-success btn-block">Thêm vào giỏ hàng</a>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                </c:forEach>--%>
+        <div class="sanpham-thietbivua-12 sanpham-thietbilon-9">
+            <div class="sanpham-hang sanpham-danhsach" id="listSanPham">
             </div>
-
         </div>
-
     </div>
 
-    <div class="row justify-content-center">
-        <ul class="pagination" id="so-trang">
-            <li class="page-item" id="btn-truoc"><a class="page-link">Trước</a></li>
-            <li class="page-item"><a class="page-link">1</a></li>
-            <li class="page-item"><a class="page-link">2</a></li>
-            <li class="page-item active"><a class="page-link">3</a></li>
-            <li class="page-item"><a class="page-link">4</a></li>
-            <li class="page-item"><a class="page-link">5</a></li>
-            <li class="page-item" id="btn-sau"><a class="page-link">Sau</a></li>
+    <div class="sanpham-hang cangiua-justify">
+        <ul class="sanpham-phantrang" id="so-trang">
         </ul>
     </div>
-
 </div>
 
 

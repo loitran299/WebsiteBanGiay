@@ -5,33 +5,25 @@
 <html lang="en">
 
 <head>
-
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="<c:url value='/template/css/quantri.css' />" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+    <link rel="stylesheet" href="/template/css/quantri.css" />
+    <link rel="stylesheet" href="/template/css/header-admin.css">
 </head>
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+<nav class="thanh-dieu-huong thanh-dieu-huong-nguoc thanh-dieu-huong-fixed-tren">
+    <div class="phan-than">
+        <div class="phan-than-dau">
+            <button class="thanh-dieu-huong-chuyen-doi" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<c:url value='/admin/trang-quan-tri'/>">SHOES - HOME ADMIN</a>
+            <a class="thanh-dieu-huong-nhan" href="<c:url value='/admin/trang-quan-tri'/>">SHOES - HOME ADMIN</a>
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <div class="bien-doi thanh-dieu-huong-bien-doi">
+            <ul class="dieu-huong thanh-dieu-huong-dieu-huong thanh-dieu-huong-phai">
                 <li>
                     <a href="<c:url value='/admin/thong-tin-tai-khoan' />">
                         <span class="glyphicon glyphicon-nguoiDung">&nbsp;</span>Xin chào: ${NGUOIDUNG.tenDangNhap }</a>

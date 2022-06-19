@@ -31,6 +31,11 @@ public class DonHangApi extends HttpServlet {
         donHangService.hoanThanhDonHang(getId(req));
     }
 
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        donHangService.xoaDonHang(getId(req));
+    }
+
     public Long getId(HttpServletRequest request) {
         String path = request.getPathInfo();
         String[] pathParts = path.split("/");

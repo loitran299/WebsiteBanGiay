@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.thungchua-long {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cot-trungbinh-3 {
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#thanhben {
+    position: fixed;
+    top: 50px;
+    left: 220px;
+    width: 220px;
+    margin-left: -220px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #222;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+.dauvao-nhom {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.thanhdieuhuong-dieuhuong {
+    float: left;
+    margin: 0;
+}
+
+.dieuhuong {
+    padding-left: 0;
+    list-style: none;
+}
+
+.thanhdieuhuong-dieuhuong>li {
+    float: left;
+}
+
+.dieuhuong>li {
+    position: relative;
+    display: block;
+}
+
+.thanh-ben > li > a {
+    color: #eee;
+    width: 220px;
+}
+
+.thanhdieuhuong-dieuhuong>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+}
+
+.dieuhuong>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+

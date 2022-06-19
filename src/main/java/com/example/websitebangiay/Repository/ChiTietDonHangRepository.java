@@ -30,4 +30,14 @@ public class ChiTietDonHangRepository {
         return chiTietDonHang;
     }
 
+    public void deleteByIdDonHang(Long id) {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.createQuery("DELETE FROM ChiTietDonHang ct WHERE ct.donHang.id = :id").setParameter("id", id).executeUpdate();
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new RuntimeException(e);
+        }
+    }
 }
