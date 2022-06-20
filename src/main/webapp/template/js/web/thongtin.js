@@ -1,5 +1,5 @@
 
-const profile_form = document.getElementById("profile-form");
+const profile_form = document.getElementById("hoso-mau");
 profile_form.addEventListener("submit",function (e){
     e.preventDefault();
 
@@ -23,7 +23,7 @@ profile_form.addEventListener("submit",function (e){
         document.getElementById('warn-cf-pass').innerHTML = "";
         const url = "http://localhost:8080/api/taikhoan/update";
         fetch(url, {
-            method: "POST",
+            method: "PUT",
             body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json; charset=UTF-8"

@@ -25,8 +25,7 @@ public class DanhMucServiceImpl implements DanhMucService {
 
     @Override
     public boolean danhMucTonTai(DanhMuc danhMuc) {
-        if(danhMucRepository.findByTen(danhMuc.getTen()) != null) return true;
-        return false;
+        return danhMucRepository.findByTen(danhMuc.getTen()) != null;
     }
 
     @Override

@@ -20,8 +20,8 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="default" value="131efe00-55df-461d-8c84-33b2b3cb5a7b" />
-          <factory-entry name="myPU" value="131efe00-55df-461d-8c84-33b2b3cb5a7b" />
+          <factory-entry name="default" />
+          <factory-entry name="myPU" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

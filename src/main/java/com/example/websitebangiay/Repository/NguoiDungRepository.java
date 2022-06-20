@@ -35,7 +35,7 @@ public class NguoiDungRepository {
 
     }
 
-    public void update(NguoiDung nguoiDung){
+    public NguoiDung update(NguoiDung nguoiDung){
         try {
             entityManager.getTransaction().begin();
             entityManager.merge(nguoiDung);
@@ -44,7 +44,7 @@ public class NguoiDungRepository {
             entityManager.getTransaction().rollback();
             throw new RuntimeException(e);
         }
-
+        return nguoiDung;
     }
 
     public NguoiDung findById(Long id){

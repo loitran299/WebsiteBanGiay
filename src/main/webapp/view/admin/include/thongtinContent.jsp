@@ -13,7 +13,7 @@
                         <a class="dieuhuong-lienket" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Thông tin người dùng</a>
                     </li>
                 </ul>
-                <form id="mau-hoso" method="post">
+                <form id="hoso-mau" method="post">
                     <hr class="mb-4" />
                     <div class="mau-hang">
                         <div class="mau-nhom cot-trungbinh-5">

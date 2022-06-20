@@ -13,7 +13,7 @@
             <h3 class="chitiet-the-tieude">${sanPham.ten}</h3>
             <div class="hang">
                 <div class="cot-thietbilon-5 cot-thietbivua-5 cot-thietbinho-6">
-                    <div class="cangiua"><img src="${sanPham.pathAnh}"></div>
+                    <div class="cangiua"><img style="max-width:100%" src="${sanPham.pathAnh}" alt="Anh san pham"></div>
                 </div>
                 <div class="cot-thietbilon-7 cot-thietbivua-7 cot-thietbinho-6">
                     <h4 class="daytren-3">Mô tả</h4>

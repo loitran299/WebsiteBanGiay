@@ -6,6 +6,7 @@ import com.example.websitebangiay.Entity.NguoiDung;
 import com.example.websitebangiay.Service.NguoiDungService;
 import com.example.websitebangiay.Service.VaiTroService;
 import com.example.websitebangiay.Utils.HttpUtils;
+import com.example.websitebangiay.Utils.SessionUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.inject.Inject;
@@ -61,7 +62,8 @@ public class TaiKhoanApi extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
         NguoiDungDto nguoiDung = HttpUtils.of(req.getReader()).toEntity(NguoiDungDto.class);
-        nguoiDungService.update(nguoiDung);
+        NguoiDung nd = nguoiDungService.update(nguoiDung);
+        SessionUtils.putValue(req, "NGUOIDUNG", nd);
     }
 
     @Override

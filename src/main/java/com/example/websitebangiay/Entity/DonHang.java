@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.SQLUpdate;
 
 
 import javax.persistence.*;
@@ -39,13 +38,14 @@ public class DonHang implements java.io.Serializable {
     @Column(name = "ngay_dat")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+7")
     private Date ngayDat;
+
     @Column(name = "ngay_giao")
     private Date ngayGiao;
-
 
     @Column(name = "ngay_nhan")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+7")
     private Date ngayNhan;
+
     @Column(name = "so_dien_thoai")
     private String soDienThoai;
 

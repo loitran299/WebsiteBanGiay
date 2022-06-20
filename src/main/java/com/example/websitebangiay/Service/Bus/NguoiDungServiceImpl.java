@@ -29,8 +29,7 @@ public class NguoiDungServiceImpl implements NguoiDungService {
 
     @Override
     public boolean nguoiDungTonTai(String username) {
-        if(nguoiDungRepository.findByTenDangNhap(username) != null) return true;
-        return false;
+        return nguoiDungRepository.findByTenDangNhap(username) != null;
     }
 
     @Override
@@ -63,7 +62,7 @@ public class NguoiDungServiceImpl implements NguoiDungService {
     }
 
     @Override
-    public void update(NguoiDungDto user) {
+    public NguoiDung update(NguoiDungDto user) {
         NguoiDung oldNguoiDung = nguoiDungRepository.findByTenDangNhap(user.getTenDangNhap());
         if (!Objects.equals(user.getMatKhau(), "")) {
             oldNguoiDung.setMatKhau(user.getMatKhau());
@@ -71,7 +70,7 @@ public class NguoiDungServiceImpl implements NguoiDungService {
         oldNguoiDung.setEmail(user.getEmail());
         oldNguoiDung.setDiaChi(user.getDiaChi());
         oldNguoiDung.setHoTen(user.getHoTen());
-        nguoiDungRepository.update(oldNguoiDung);
+        return nguoiDungRepository.update(oldNguoiDung);
     }
 
     @Override

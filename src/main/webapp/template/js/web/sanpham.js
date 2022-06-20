@@ -133,7 +133,7 @@ function khiClickNhanHieu(id) {
     if (sanPhamMoi != null){
         sanPhamMoi.innerHTML = `
                 <div class="sanpham-the-phanthan">
-                    <img class="anh-giaypine" src="${sanPham.pathAnh}" />
+                    <img class="anh-giaypine" style="max-width:100%" src="${sanPham.pathAnh}"  alt="anh"/>
                     <h5 class="sanpham-the-tieude"><a href="/chi-tiet-san-pham?id=${sanPham.id}">${sanPham.ten}</a></h5>
                     <p class="sanpham-the-loaigiay">${sanPham.danhMuc.ten} / ${sanPham.nhanHieu.ten}</p>
                     <p class="sanpham-the-gia">${sanPham.gia.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'})}</p>
