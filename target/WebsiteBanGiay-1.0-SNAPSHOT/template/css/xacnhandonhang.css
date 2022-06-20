@@ -1,0 +1,165 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.thungdung {
+    /*dchalfjlksdajf*/
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .thungdung {
+        max-width: 720px;
+    }
+}
+
+.letren-5 {
+    margin-top: 3rem!important;
+}
+
+.leduoi-5 {
+    margin-bottom: 3rem!important;
+}
+
+.hang {
+    padding: 32px;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.huong-linhhoat {
+    display: flex!important;
+}
+
+.bienminh-noidung-trungtam {
+    -webkit-box-pack: center!important;
+    justify-content: center!important;
+}
+
+@media (min-width: 768px) {
+    .cot-trungbinh-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.666667%;
+    }
+}
+
+.cot-trungbinh-8 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+
+.the {
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.vanban-bentrai {
+    text-align: left !important;
+}
+
+.vanban-benphai {
+    text-align: left !important;
+}
+
+.phongchu-trongluong-dam {
+    font-weight: 700 !important;
+}
+
+.hienthi-khoi {
+    display: block !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.bien-duoi {
+    border-bottom: 1px solid #dee2e6!important;
+}
+
+.bien-tren {
+    border-top: 1px solid #dee2e6 !important;
+}
+
+.bang-phanung {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bang {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem!important;
+}
+
+.vanban-dabitat {
+    color: #6c757d!important;
+}
+
+.product {
+    margin-bottom: 30px;
+}
+
+.hang {
+    padding: 32px;
+}
+
+.bienminh-noidung-cuoi {
+    -webkit-box-pack: end!important;
+    justify-content: flex-end!important;
+}
+
+@media (min-width: 768px) {
+    .col-md-5 {
+        -webkit-box-flex: 0;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+}
+
+.col-md-5 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
+.p-3 {
+    padding: 1rem!important;
+}
+
+.cot-bang {
+    padding: 0 2px;
+}

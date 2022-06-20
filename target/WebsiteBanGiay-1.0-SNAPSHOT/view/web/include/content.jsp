@@ -1,60 +1,70 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<link rel="stylesheet" href="/template/css/slide.css">
-<link rel="stylesheet" href="/template/css/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" href="/template/css/sanpham.css">
-<section class="slide cangiua">
-    <div class="sanpham-tong">
-        <!-- Slider -->
-        <div class="image-slider">
-            <div class="image-item">
-                <div class="image">
-                    <img
-                            src="https://images.unsplash.com/photo-1611510338559-2f463335092c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
-                            alt=""
-                    />
-                </div>
-                <h3 class="image-title">Balenciaga</h3>
-            </div>
-            <div class="image-item">
-                <div class="image">
-                    <img
-                            src="https://images.unsplash.com/photo-1588484628369-dd7a85bfdc38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
-                            alt=""
-                    />
-                </div>
-                <h3 class="image-title">Yeezy 700V3</h3>
-            </div>
-            <div class="image-item">
-                <div class="image">
-                    <img
-                            src="https://images.unsplash.com/photo-1602033693432-b88c0b6320ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
-                            alt=""
-                    />
-                </div>
-                <h3 class="image-title">Rick Owens</h3>
-            </div>
-            <div class="image-item">
-                <div class="image">
-                    <img
-                            src="https://images.unsplash.com/photo-1606890542241-b848582fe5cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
-                            alt=""
-                    />
-                </div>
-                <h3 class="image-title">Salomon</h3>
-            </div>
-            <div class="image-item">
-                <div class="image">
-                    <img
-                            src="https://images.unsplash.com/photo-1621665421558-831f91fd0500?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                            alt=""
-                    />
-                </div>
-                <h3 class="image-title">Jordan</h3>
-            </div>
+<link rel="stylesheet" href="/template/css/phongcach.css">
+<link rel="stylesheet" href="/template/css/phanung.css">
+<div class="chua-bo-trinhchieu">
+<div class="bo-trinhchieu">
+    <div class="trinhchieu hoatdong">
+        <img src="/template/img/1.jpg" alt="">
+        <div class="thongtin">
+            <h2>Xray Footwear</h2>
+            <p>Đèn huỳnh quang phù hợp với giày là một cấu trúc kim loại được bao phủ bởi gỗ thành phẩm.</p>
         </div>
     </div>
-</section>
+    <div class="trinhchieu">
+        <img src="/template/img/2.jpg" alt="">
+        <div class="thongtin">
+            <h2>Converse Chuck 70</h2>
+            <p>Chuck Taylor II, một mô hình cập nhật, được công bố bởi ban quản lý công ty vào tháng 7 năm 2015.</p>
+        </div>
+    </div>
+    <div class="trinhchieu">
+        <img src="/template/img/3.jpg" alt="">
+        <div class="thongtin">
+            <h2>Stan Smith</h2>
+            <p>Adidas Stan Smith là một đôi giày tennis do Adidas sản xuất và ra mắt lần đầu tiên vào năm 1965.</p>
+        </div>
+    </div>
+    <div class="trinhchieu">
+        <img src="/template/img/4.jpg" alt="">
+        <div class="thongtin">
+            <h2>Xray Footwear</h2>
+            <p>Đèn huỳnh quang phù hợp với giày là một cấu trúc kim loại được bao phủ bởi gỗ thành phẩm.</p>
+        </div>
+    </div>
+    <div class="trinhchieu">
+        <img src="/template/img/5.jpg" alt="">
+        <div class="thongtin">
+            <h2>Stan Smith</h2>
+            <p>Adidas Stan Smith là một đôi giày tennis do Adidas sản xuất và ra mắt lần đầu tiên vào năm 1965.</p>
+        </div>
+    </div>
+    <div class="trinhchieu">
+        <img src="/template/img/6.jpg" alt="">
+        <div class="thongtin">
+            <h2>Converse Chuck 70</h2>
+            <p>Chuck Taylor II, một mô hình cập nhật, được công bố bởi ban quản lý công ty vào tháng 7 năm 2015.</p>
+        </div>
+    </div>
+
+    <div class="dieuhuong-nut">
+        <i class="fas fa-arrow-left nut-quaylai"></i>
+        <i class="fas fa-arrow-right nut-chuyentiep"></i>
+    </div>
+
+    <div class="dieuhuong-nhanh">
+        <div class="trinhchieu-daidien active"></div>
+        <div class="trinhchieu-daidien"></div>
+        <div class="trinhchieu-daidien"></div>
+        <div class="trinhchieu-daidien"></div>
+        <div class="trinhchieu-daidien"></div>
+        <div class="trinhchieu-daidien"></div>
+    </div>
+
+</div>
+</div>
 
 <div class="sanpham-tong">
     <div class="sanpham-hang">
@@ -96,7 +106,7 @@
     </div>
 </div>
 
-
+<script src="/template/js/web/ungdung.js"></script>
 <script src="/template/js/web/sanpham.js"></script>
 <script src="/template/js/web/themsanpham.js"></script>
 

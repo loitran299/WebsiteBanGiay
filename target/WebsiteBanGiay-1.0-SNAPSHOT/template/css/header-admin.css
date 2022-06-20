@@ -1,0 +1,212 @@
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    font-size: 15px;
+}
+li {
+    text-align: -webkit-match-parent;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+a:-webkit-any-link {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1.5;
+}
+a:hover {
+    opacity: 0.8;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.dieu-huong:after{
+    display: table;
+    content: " ";
+    clear: both;
+}
+.dieu-huong:before{
+    display: table;
+    content: " ";
+    clear: both;
+}
+.dieu-huong {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+@media (min-width: 768px){
+    .thanh-dieu-huong-phai {
+        float: right!important;
+        margin-right: -15px;
+    }}
+@media (min-width: 768px){
+    .thanh-dieu-huong-dieu-huong {
+        float: left;
+        margin: 0;
+    }}
+.thanh-dieu-huong-dieu-huong {
+    margin: 7.5px -15px;
+}
+@media (min-width: 768px){
+    .thanh-dieu-huong-dieu-huong>li {
+        float: left;
+    }}
+.dieu-huong>li {
+    position: relative;
+    display: block;
+}
+@media (min-width: 768px){
+    .thanh-dieu-huong-dieu-huong>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }}
+.thanh-dieu-huong-dieu-huong>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.dieu-huong>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.thanh-dieu-huong{
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    display: block;
+}
+.thanh-dieu-huong:before{
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+}
+.thanh-dieu-huong:after{
+    clear: both;
+    display: table;
+    content: " ";
+}
+.thanh-dieu-huong-nguoc{
+    background-color: #222;
+    border-color: #080808;
+}
+.thanh-dieu-huong-fixed-tren{
+    top: 0;
+}
+@media (min-width: 768px){
+    .thanh-dieu-huong-fixed-duoi, .thanh-dieu-huong-fixed-tren {
+        border-radius: 0;
+    }}
+.thanh-dieu-huong-fixed-duoi, .thanh-dieu-huong-fixed-tren {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.phan-than{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px){
+    .phan-than {
+        width: 100%;
+    }}
+.phan-than:before{
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+}
+.phan-than:after{
+    clear: both;
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+}
+.phan-than>.phan-than-dau{
+    margin-left: 0;
+    margin-right: 0;
+}
+@media (min-width: 768px){
+    .phan-than-dau {
+        float: left;
+    }}
+.thanh-dieu-huong-chuyen-doi{
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+@media (min-width: 768px){
+    .thanh-dieu-huong-chuyen-doi {
+        display: none;
+    }}
+.thanh-dieu-huong-nhan{
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.thanh-dieu-huong-bien-doi{
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 10%);
+}
+.bien-doi{
+    display: none;
+}
+@media (min-width: 768px){
+    .thanh-dieu-huong-bien-doi.bien-doi {
+        display: block!important;
+        height: auto!important;
+        padding-bottom: 0;
+        overflow: visible!important;
+    }}
+@media (min-width: 768px){
+    .thanh-dieu-huong-bien-doi {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }}
