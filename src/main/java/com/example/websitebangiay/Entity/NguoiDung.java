@@ -47,9 +47,9 @@ public class NguoiDung implements java.io.Serializable {
     inverseJoinColumns = @JoinColumn(name = "id_vai_tro"))
     private Set<VaiTro> vaiTro;
 
-    @JsonIgnore
-    @Transient
-    private String matKhauXacThuc;
+//    @JsonIgnore
+//    @Transient
+//    private String matKhauXacThuc;
 
     @JsonIgnore
     @Transient

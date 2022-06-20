@@ -1,9 +1,9 @@
-
-document.getElementById("formLienHe").addEventListener('submit',function (e) {
+//jjkh
+document.getElementById("mau-lienhe").addEventListener('submit',function (e) {
     e.preventDefault();
-    const ten = document.getElementById("name");
+    const ten = document.getElementById("ten");
     const email = document.getElementById("email");
-    const loiNhan = document.getElementById("message");
+    const loiNhan = document.getElementById("loinhan");
 
     const data = {
         "hoTen":ten.value,

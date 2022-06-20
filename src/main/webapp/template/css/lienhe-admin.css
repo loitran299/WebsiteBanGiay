@@ -45,7 +45,6 @@
     font-weight: normal;
     font-size: medium;
     font-style: normal;
-    color: -internal-quirk-inherit;
     text-align: center;
     border-color: grey;
     font-variant: normal;
@@ -68,7 +67,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-
+    display:flex;
 }
 div{
     display: block;
@@ -97,7 +96,7 @@ html{
     z-index: 2;
 }
 .phuong-thuc-than{
-    order-radius: 5px;
+    border-radius: 5px;
     background-color: aliceblue;
     margin: auto;
     z-index: 3;
@@ -112,6 +111,7 @@ html{
     background-color: #337ab7;
 }
 .nut-bam{
+    float:right;
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -155,8 +155,8 @@ html{
     appearance: none;
     border-radius: 5px;
     -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    /*transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;*/
+    /*transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;*/
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 .le-trai-phai-tu-can{

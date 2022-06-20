@@ -47,14 +47,16 @@ function xoaLienHe(id) {
 }
 
 const myModal = document.getElementById("myModal");
-myModal.classList.add('d-none');
+// myModal.classList.add('hien-thi-kieu-none');
 
-document.getElementById("close").addEventListener('click',function () {
-    myModal.classList.add('d-none');
+document.getElementById("dong").addEventListener('click',function () {
+    myModal.classList.remove('phuong-thuc-1');
+    myModal.classList.add('hien-thi-kieu-none');
 })
 
 function traLoiLienHe(id) {
-    myModal.classList.remove('d-none');
+    myModal.classList.remove('hien-thi-kieu-none');
+    myModal.classList.add('phuong-thuc-1');
     document.getElementById("formLienHe").addEventListener('submit',function () {
         const traLoi = document.getElementById("traLoi");
         const url = `http://localhost:8080/api/lienhe/traloi`;
@@ -72,7 +74,8 @@ function traLoiLienHe(id) {
         })
             .then(function (response) {
                 if (response.ok){
-                    myModal.classList.add('d-none');
+                    myModal.classList.remove('phuong-thuc-1');
+                    myModal.classList.add('hien-thi-kieu-none');
                     layLienHes(xuatHTML);
                 }else{
                     alert("lỗi");

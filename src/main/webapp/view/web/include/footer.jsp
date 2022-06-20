@@ -14,7 +14,7 @@
     <div class="phan-than">
         <div class="hang-chan">
             <div class="cot-dt-3 cot-pc-4 cot-lap-3">
-                <h5>About</h5>
+                <h5>Thông tin</h5>
                 <hr class="nen-trang le-duoi-2 le-tren-0 hienthi-thanh-1-hang tu-dong-can-le chieu-rong-25">
                 <p class="le-duoi-0">
                     Hãy đến với cửa hàng của chúng tôi để nhận thêm ưu đãi.
@@ -55,7 +55,7 @@
             </div>
             <div class="cot-12  le-tren-1">
                 <p class="can-trai">
-                    <a href="#">Back to top</a>
+                    <a href="#">Quay về đầu trang</a>
                 </p>
             </div>
         </div>

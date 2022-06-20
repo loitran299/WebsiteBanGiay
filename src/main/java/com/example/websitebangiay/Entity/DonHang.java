@@ -39,8 +39,6 @@ public class DonHang implements java.io.Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+7")
     private Date ngayDat;
 
-    @Column(name = "ngay_giao")
-    private Date ngayGiao;
 
     @Column(name = "ngay_nhan")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "GMT+7")

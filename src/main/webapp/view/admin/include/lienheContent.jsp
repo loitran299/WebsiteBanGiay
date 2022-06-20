@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
-
 <script src="https://kit.fontawesome.com/75eef02814.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/template/css/lienhe-admin.css">
 <div class="cot-lap-9 hien-len">
@@ -18,19 +17,16 @@
         </thead>
         <tbody>
         </tbody>
-
     </table>
-
     <ul class="phan-trang">
     </ul>
 </div>
 
-<div class="phuong-thuc-1 hien-thi-kieu-none" id="myModal">
+<div class="hien-thi-kieu-none" id="myModal">
     <div class="phuong-thuc-lop-phu"></div>
 
     <div class="phuong-thuc-than">
         <div class="phuong-thuc-ben-trong">
-
             <div class="the">
                 <div class="the-dau nen hang-dau">
                     <i class="fa fa-envelope"></i>Trả lời liên hệ.
@@ -47,7 +43,6 @@
                     </form>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

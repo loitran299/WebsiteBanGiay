@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- Custom Theme files -->
-    <link href="/template/css/login.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/template/css/dangky.css" rel="stylesheet" type="text/css" media="all" />
     <!-- //Custom Theme files -->
     <!-- web font -->
     <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body>
 <!-- main -->
 <div class="main-w3layouts wrapper">
-    <h1>SIGN UP</h1>
+    <h1>Đăng ký</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
             <form action="xu-ly-dang-ky" method="post">
@@ -28,24 +28,20 @@
                 </c:if>
                 <input type="text" id="tenDangNhap" name="tenDangNhap" class="text" placeholder="Tên Đăng nhập" required="required"/>
 
-<%--                <input class="text" type="text" name="Username" placeholder="Username" required="required">--%>
                 <label for="email" class="error" id="emailLabel"></label>
                 <input type="text" id="email" name="email" class="email" placeholder="Email" required="required"/>
 
-<%--                <input class="text email" type="email" name="email" placeholder="Email" required="required">--%>
 
                 <input type="password" id="matKhau" name="matKhau" class="text" placeholder="Mật khẩu" required="required"/>
 
-<%--                <input class="text" type="password" name="password" placeholder="Password" required="required">--%>
                 <label for="matKhauXacThuc" class="error" id="matKhauXacThucLabel"></label>
                 <input type="password" id="matKhauXacThuc" name="matKhauXacThuc" class="text w3lpass" placeholder="Nhập lại mật khẩu" required="required"/>
 
-<%--                <input class="text w3lpass" type="password" name="confirmPassword" placeholder="Confirm Password" required="required">--%>
                 <input type="hidden" name="action" value="dangky">
                 <div class="wthree-text">
                     <label class="anim">
                         <input type="checkbox" class="checkbox">
-                        <span>I Agree To The Terms & Conditions</span>
+<%--                        <span>I Agree To The Terms & Conditions</span>--%>
                     </label>
                     <div class="clear"> </div>
                 </div>
